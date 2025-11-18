@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-montserrat: 'Montserrat', 'sans-serif';
+}
+
+@theme {
+	--color-text: #111023;
+	--color-background: #e0e0f1;
+	--color-primary: #948fe2;
+	--color-secondary: #cfcee9;
+	--color-accent: #5c57b2;
+}
+
+@layer theme {
+	.dark {
+		--color-text: #dddcef;
+		--color-background: #0e0e20;
+		--color-primary: #231d72;
+		--color-secondary: #171631;
+		--color-accent: #524da8;
+	}
+}
