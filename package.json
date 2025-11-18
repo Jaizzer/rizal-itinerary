@@ -3,10 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "https://jaizzer.github.io/rizal-itinerary",
 	"scripts": {
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist",
 		"dev": "vite --host",
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
@@ -35,7 +32,6 @@
 		"eslint-plugin-perfectionist": "^4.15.0",
 		"eslint-plugin-react-hooks": "^5.2.0",
 		"eslint-plugin-react-refresh": "^0.4.20",
-		"gh-pages": "^6.3.0",
 		"globals": "^16.4.0",
 		"jsdom": "^27.0.0",
 		"prettier": "^3.6.2",
