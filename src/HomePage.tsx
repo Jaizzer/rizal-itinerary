@@ -6,7 +6,7 @@ import Page from './Page';
 export default function HomePage(): JSX.Element {
 	return (
 		<Page>
-			<main className="grid gap-10 max-w-[1024px]">
+			<main className="max-w-[1024px]">
 				<section className="grid gap-3 md:grid-cols-2">
 					<img
 						className="rounded-lg max-w-65 justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
