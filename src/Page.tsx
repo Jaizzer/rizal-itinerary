@@ -5,5 +5,9 @@ interface PageProps {
 }
 
 export default function Page({ children }: PageProps): JSX.Element {
-	return <div className="bg-background w-full h-full p-4 border-2">{children}</div>;
+	return (
+		<div className="bg-white w-full grid justify-center h-full p-10 md:p-20 border-2">
+			{children}
+		</div>
+	);
 }
