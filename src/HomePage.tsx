@@ -9,7 +9,7 @@ export default function HomePage(): JSX.Element {
 			<main className="max-w-[1024px]">
 				<section className="grid gap-3 md:grid-cols-2">
 					<img
-						className="rounded-lg max-w-65 justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
+						className="rounded-lg justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
 						src={homePageImage1}
 					/>
 					<div className="self-center grid gap-3">
