@@ -35,12 +35,12 @@ export default function HomePage(): JSX.Element {
 							<br /> Travel History
 						</h1>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro at
-							distinctio praesentium corporis adipisci. Corporis iure voluptatum,
-							neque soluta placeat
+							Follow in the footsteps of José Rizal across the Philippines and the
+							world. Learn about his education, travels, works, and the people who
+							shaped his remarkable journey.
 						</p>
 						<button
-							className="bg-primary hover:bg-accent justify-self-start rounded-md p-3 text-center font-semibold text-white"
+							className="bg-primary hover:bg-accent justify-self-start rounded-md mt-4 p-3 text-center font-semibold text-white"
 							onClick={handleScrollToTours}
 						>
 							Start Exploring
