@@ -29,31 +29,10 @@ export default function Page({ children }: PageProps): JSX.Element {
 							cultural heritage.
 						</p>
 					</div>
-					<div>
-						<h3 className="font-bold text-lg mb-2">Links</h3>
-						<ul className="text-sm space-y-1">
-							<li>
-								<a className="hover:text-accent" href="#home">
-									Home
-								</a>
-							</li>
-							<li>
-								<a className="hover:text-accent" href="#tours">
-									Tours
-								</a>
-							</li>
-							<li>
-								<a className="hover:text-accent" href="#trivia">
-									Trivia
-								</a>
-							</li>
-							<li>
-								<a className="hover:text-accent" href="#contact">
-									Contact
-								</a>
-							</li>
-						</ul>
-					</div>
+
+					{/* Empty spacer column */}
+					<div className="hidden md:block"></div>
+
 					<div>
 						<h3 className="font-bold text-lg mb-2">Contact</h3>
 						<p className="text-sm text-muted-foreground">
