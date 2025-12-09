@@ -4,15 +4,17 @@ import { IoMap } from 'react-icons/io5';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { MdCardTravel } from 'react-icons/md';
 
-import homePageImage1 from './assets/home-page-image-1.jpg';
+import homePageImage1 from './assets/home-page-image-1.png';
 import homePageImage2 from './assets/home-page-image-2.jpg';
 import Page from './Page';
+import TourCard from './TourCard';
+import tours from './tours';
 
 export default function HomePage(): JSX.Element {
 	return (
 		<Page>
-			<main className="max-w-[1024px] grid gap-15 md:gap-30">
-				<section className="grid gap-3 md:grid-cols-2">
+			<main className="grid gap-15 md:gap-20">
+				<section className="max-w-[1304px] grid gap-3 md:grid-cols-2 sm:mt-15 bg-background p-10 md:p-20 rounded-none lg:rounded-2xl">
 					<img
 						className="rounded-lg justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
 						src={homePageImage1}
@@ -34,9 +36,9 @@ export default function HomePage(): JSX.Element {
 						</button>
 					</div>
 				</section>
-				<section className="grid gap-7 md:gap-30 md:grid-cols-[auto_1fr]">
+				<section className="grid gap-7 md:gap-20 md:grid-cols-[auto_1fr] px-10 md:px-20">
 					<img
-						className="rounded-3xl justify-self-center md:max-w-90 md:col-start-1 md:row-span-full md:justify-self-start"
+						className="rounded-3xl w-full justify-self-center md:max-w-90 md:col-start-1 md:row-span-full md:justify-self-start"
 						src={homePageImage2}
 					/>
 					<div className="self-center grid">
@@ -78,6 +80,19 @@ export default function HomePage(): JSX.Element {
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section className="w-full grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-10 pb-10 md:px-20 mb-15">
+					{tours.map((tour, index) => (
+						<TourCard
+							duration={tour.duration}
+							image={tour.image}
+							key={index}
+							location={tour.location}
+							name={tour.name}
+							price={tour.price}
+							rating={tour.rating}
+						/>
+					))}
 				</section>
 			</main>
 		</Page>
