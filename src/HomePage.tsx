@@ -1,8 +1,8 @@
 import type { JSX } from 'react';
 
+import { useRef } from 'react';
 import { IoMap } from 'react-icons/io5';
-import { MdOutlineTravelExplore } from 'react-icons/md';
-import { MdCardTravel } from 'react-icons/md';
+import { MdCardTravel, MdOutlineTravelExplore } from 'react-icons/md';
 
 import homePageImage1 from './assets/home-page-image-1.png';
 import homePageImage2 from './assets/home-page-image-2.jpg';
@@ -11,6 +11,12 @@ import TourCard from './TourCard';
 import tours from './tours';
 
 export default function HomePage(): JSX.Element {
+	const toursRef = useRef<HTMLDivElement>(null);
+
+	const handleScrollToTours = () => {
+		toursRef.current?.scrollIntoView({ behavior: 'smooth' });
+	};
+
 	return (
 		<Page>
 			<main className="grid gap-15 md:gap-20 mb-15">
@@ -32,7 +38,10 @@ export default function HomePage(): JSX.Element {
 							distinctio praesentium corporis adipisci. Corporis iure voluptatum,
 							neque soluta placeat
 						</p>
-						<button className="bg-primary hover:bg-accent justify-self-start rounded-md p-3 text-center font-semibold text-white">
+						<button
+							className="bg-primary hover:bg-accent justify-self-start rounded-md p-3 text-center font-semibold text-white"
+							onClick={handleScrollToTours}
+						>
 							Start Exploring
 						</button>
 					</div>
@@ -82,7 +91,10 @@ export default function HomePage(): JSX.Element {
 						</ul>
 					</div>
 				</section>
-				<section className="w-full grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-10 pb-10 md:px-20">
+				<section
+					className="w-full grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-10 pb-10 md:px-20"
+					ref={toursRef}
+				>
 					{tours.map((tour, index) => (
 						<TourCard
 							duration={tour.duration}
