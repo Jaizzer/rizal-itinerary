@@ -3,6 +3,7 @@ import type { JSX } from 'react';
 import { useRef } from 'react';
 import { IoMap } from 'react-icons/io5';
 import { MdCardTravel, MdOutlineTravelExplore } from 'react-icons/md';
+import { Link } from 'react-router';
 
 import homePageImage1 from './assets/home-page-image-1.png';
 import homePageImage2 from './assets/home-page-image-2.jpg';
@@ -96,15 +97,17 @@ export default function HomePage(): JSX.Element {
 					ref={toursRef}
 				>
 					{tours.map((tour, index) => (
-						<TourCard
-							duration={tour.duration}
-							image={tour.image}
-							key={index}
-							location={tour.location}
-							name={tour.name}
-							price={tour.price}
-							rating={tour.rating}
-						/>
+						<Link className="w-full" to={`/tour/${tour.id}`}>
+							<TourCard
+								duration={tour.duration}
+								image={tour.image}
+								key={index}
+								location={tour.location}
+								name={tour.name}
+								price={tour.price}
+								rating={tour.rating}
+							/>
+						</Link>
 					))}
 				</section>
 			</main>

@@ -22,9 +22,9 @@ export default function TourCard({
 	rating,
 }: TourCardProps) {
 	return (
-		<Card className="w-full overflow-hidden h-100 rounded-2xl shadow-md border-none">
-			<img alt={name} className="w-full h-48 object-cover" src={image} />
-			<div className="p-4 grid gap-3">
+		<Card className="w-full overflow-hidden h-125 rounded-2xl shadow-md border-none transform transition-all duration-300 hover:shadow-xl hover:scale-105">
+			<img alt={name} className="w-full h-70 object-cover" src={image} />
+			<div className="p-5 grid gap-3">
 				<div className="flex items-center gap-1 text-sm font-semibold">
 					<Star className="fill-yellow-400 text-yellow-400" size={18} />
 					{rating}
@@ -34,7 +34,7 @@ export default function TourCard({
 						{name}
 					</CardTitle>
 				</CardHeader>
-				<CardContent className="grid">
+				<CardContent className="grid gap-2">
 					<div className="flex items-center gap-2 text-sm text-gray-600">
 						<FiClock className="text-primary" size={18} />
 						<span>{duration}</span>
@@ -43,7 +43,7 @@ export default function TourCard({
 						<FiTag className="text-primary" size={18} />
 						{price}
 					</div>
-					<div className="flex items-center gap-1 text-sm text-gray-600 line-clamp-1 mt-4">
+					<div className="flex items-center gap-1 text-sm text-gray-600 line-clamp-1 mt-3">
 						<IoLocationSharp className="text-primary" size={18} />
 						{location}
 					</div>
