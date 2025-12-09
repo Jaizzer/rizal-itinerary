@@ -11,7 +11,7 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 
 	if (!tour)
 		return (
-			<div className="flex flex-col items-center justify-center min-h-[70vh] gap-6 text-center">
+			<div className="flex flex-col items-center justify-center min-h-[70vh] gap-6 text-center p-10">
 				<h1 className="text-6xl md:text-8xl font-bold text-accent">404</h1>
 				<h2 className="text-2xl md:text-4xl font-semibold">Page Not Found</h2>
 				<p className="text-gray-600">
