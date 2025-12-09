@@ -43,7 +43,7 @@ export default function Page({ children }: PageProps): JSX.Element {
 					</div>
 				</div>
 				<div className="mt-15 text-center text-sm text-muted-foreground">
-					© {new Date().getFullYear()} Rizal Travels. All rights reserved.
+					© {new Date().getFullYear()} Rizal Itinerary. All rights reserved.
 				</div>
 			</footer>
 		</div>
