@@ -13,7 +13,7 @@ import tours from './tours';
 export default function HomePage(): JSX.Element {
 	return (
 		<Page>
-			<main className="grid gap-15 md:gap-20">
+			<main className="grid gap-15 md:gap-20 mb-15">
 				<section className="max-w-[1304px] grid gap-3 md:grid-cols-2 sm:mt-15 bg-background p-10 md:p-20 rounded-none lg:rounded-2xl">
 					<img
 						className="rounded-lg justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
@@ -81,7 +81,7 @@ export default function HomePage(): JSX.Element {
 						</ul>
 					</div>
 				</section>
-				<section className="w-full grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-10 pb-10 md:px-20 mb-15">
+				<section className="w-full grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-10 pb-10 md:px-20">
 					{tours.map((tour, index) => (
 						<TourCard
 							duration={tour.duration}
