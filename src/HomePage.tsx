@@ -24,7 +24,7 @@ export default function HomePage(): JSX.Element {
 							<span className="underline decoration-primary decoration-5 md:decoration-8 underline-offset-8">
 								Discover
 							</span>{' '}
-							Rizal's Travel History
+							Rizal's<br/> Travel History
 						</h1>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro at
