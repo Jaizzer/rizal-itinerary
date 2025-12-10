@@ -21,8 +21,9 @@ export default function Page({ children }: PageProps): JSX.Element {
 				{children}
 			</div>
 			<footer className="w-full mt-10 bg-background text-text py-5">
-				<div className="max-w-[1024px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-10">
-					<div>
+				<div className="max-w-[1024px] mx-auto flex flex-col md:flex-row justify-between gap-6 px-10">
+					{/* About */}
+					<div className="flex-1">
 						<h3 className="font-bold text-lg mb-2">About</h3>
 						<p className="text-sm text-muted-foreground">
 							Learn about the life and travels of Jose Rizal, Philippine history, and
@@ -30,10 +31,8 @@ export default function Page({ children }: PageProps): JSX.Element {
 						</p>
 					</div>
 
-					{/* Empty spacer column */}
-					<div className="hidden md:block"></div>
-
-					<div>
+					{/* Contact */}
+					<div className="flex-1">
 						<h3 className="font-bold text-lg mb-2">Contact</h3>
 						<p className="text-sm text-muted-foreground">
 							Email: info@rizaltravels.com
@@ -41,7 +40,19 @@ export default function Page({ children }: PageProps): JSX.Element {
 							Phone: +63 912 345 6789
 						</p>
 					</div>
+
+					{/* References */}
+					<div className="flex-1">
+						<h3 className="font-bold text-lg mb-2">References</h3>
+						<ul className="text-sm text-muted-foreground space-y-1">
+							<li>
+								Rizal, J. (2011). Reminiscences and travels. National Historical
+								Commission of the Philippines.
+							</li>
+						</ul>
+					</div>
 				</div>
+
 				<div className="mt-15 text-center text-sm text-muted-foreground">
 					© {new Date().getFullYear()} Rizal's Itinerary. All rights reserved.
 				</div>
