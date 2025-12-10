@@ -22,7 +22,7 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 		);
 
 	return (
-		<div className="max-w-[1024px] mx-auto p-10 grid gap-6">
+		<div className="max-w-[1024px] mx-auto p-10 grid gap-5 md:gap-10">
 			{/* Banner + Description */}
 			<div className="grid gap-6 md:grid-cols-2 items-center">
 				{/* MAIN IMAGE SLIDER */}
@@ -74,7 +74,7 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 					items={tour.transportation}
 				/>
 				<SectionCard title="Food" icon={<FaUtensils />} items={tour.food} />
-				<SectionCard title="Works Done" icon={<MdOutlineWork />} items={tour.works} />
+				<SectionCard title="Activities" icon={<MdOutlineWork />} items={tour.works} />
 			</div>
 
 			{/* People Grid */}
@@ -198,29 +198,39 @@ function SectionCard({
 	);
 }
 
-/* ------------------------- PEOPLE GRID ------------------------- */
+/* ------------------------- PEOPLE GRID (SECTION CARD) ------------------------- */
 function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX.Element {
 	return (
 		<div>
-			<h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-				<IoPeopleCircle className="text-accent" size={28} />
-				{title}
-			</h2>
+			{/* Section Card */}
+			<div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 w-full">
+				{/* Section Title */}
+				<h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+					<IoPeopleCircle className="text-accent" size={28} />
+					{title}
+				</h2>
 
-			<div className="flex gap-10 flex-wrap">
-				{people.map((person) => (
-					<div className="text-center grid justify-items-center gap-1" key={person.name}>
-						<img
-							alt={person.name}
-							className="w-28 h-28 object-cover rounded-full shadow-md border border-secondary"
-							src={person.image}
-						/>
-						<p className="font-medium text-base">{person.name}</p>
-						{person.role && (
-							<p className="text-sm text-muted-foreground">{person.role}</p>
-						)}
-					</div>
-				))}
+				{/* People Items */}
+				<div className="flex flex-wrap gap-6">
+					{people.map((person) => (
+						<div
+							key={person.name}
+							className="flex flex-col items-center gap-1 w-28" // <-- center content inside the card
+						>
+							<img
+								alt={person.name}
+								className="w-28 h-28 object-cover rounded-full shadow-md border border-secondary"
+								src={person.image}
+							/>
+							<p className="font-medium text-base text-center">{person.name}</p>
+							{person.role && (
+								<p className="text-sm text-muted-foreground text-center">
+									{person.role}
+								</p>
+							)}
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);
