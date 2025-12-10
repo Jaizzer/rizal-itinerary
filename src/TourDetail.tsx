@@ -203,7 +203,7 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX
 	return (
 		<div>
 			{/* Section Card */}
-			<div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 w-full">
+			<div className="bg-white dark:bg-gray-800 shadow-md rounded-3xl p-8 w-full">
 				{/* Section Title */}
 				<h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
 					<IoPeopleCircle className="text-accent" size={28} />
