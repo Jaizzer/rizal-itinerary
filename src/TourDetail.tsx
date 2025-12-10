@@ -22,14 +22,14 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 		);
 
 	return (
-		<div className="max-w-[1024px] mx-auto p-10 grid gap-10">
+		<div className="max-w-[1024px] mx-auto p-10 grid gap-6">
 			{/* Banner + Description */}
 			<div className="grid gap-6 md:grid-cols-2 items-center">
 				{/* MAIN IMAGE SLIDER */}
 				<ImageSlider images={tour.main} title={tour.name} />
 
 				{/* Description */}
-				<div className="grid gap-4 p-2 md:p-4 self-start md:self-center">
+				<div className="grid gap-4 pt-2 md:p-4 self-start md:self-center">
 					<h2 className="text-xl md:text-2xl font-semibold text-accent">Overview</h2>
 					<p className="text-gray-700 text-sm md:text-base leading-relaxed">
 						{tour.description}
@@ -40,22 +40,22 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 			{/* Overview */}
 			<div className="grid gap-4 md:grid-cols-3">
 				<div>
-					<h2 className="text-xl font-semibold flex items-center gap-2">
+					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
 						<FaMapMarkedAlt className="text-accent" /> Duration
-					</h2>
-					<p>{tour.duration}</p>
+					</h3>
+					<p className="text-sm md:text-base">{tour.duration}</p>
 				</div>
 				<div>
-					<h2 className="text-xl font-semibold flex items-center gap-2">
+					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
 						<MdAttractions className="text-accent" /> Location
-					</h2>
-					<p>{tour.location}</p>
+					</h3>
+					<p className="text-sm md:text-base">{tour.location}</p>
 				</div>
 				<div>
-					<h2 className="text-xl font-semibold flex items-center gap-2">
+					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
 						<FaUtensils className="text-accent" /> Price
-					</h2>
-					<p>{tour.price}</p>
+					</h3>
+					<p className="text-sm md:text-base">{tour.price}</p>
 				</div>
 			</div>
 
