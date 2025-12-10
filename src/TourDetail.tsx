@@ -91,9 +91,17 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
 	const [index, setIndex] = useState(0);
 
-	const next = () => setIndex((i) => (i + 1) % images.length);
-	const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
+	const next = () => {
+		setIndex((i) => {
+			return (i + 1) % images.length;
+		});
+	};
 
+	const prev = () => {
+		setIndex((i) => {
+			return (i - 1 + images.length) % images.length;
+		});
+	};
 	return (
 		<div className="relative group">
 			<img
@@ -138,15 +146,22 @@ function SectionCard({
 }): JSX.Element {
 	const [index, setIndex] = useState(0);
 
-	const next = () => setIndex((i) => (i + 1) % items.length);
-	const prev = () => setIndex((i) => (i - 1 + items.length) % items.length);
+	const next = () => {
+		if (items.length === 0) return; // prevent unsafe access
+		setIndex((i) => (i + 1) % items.length);
+	};
+
+	const prev = () => {
+		if (items.length === 0) return;
+		setIndex((i) => (i - 1 + items.length) % items.length);
+	};
 
 	const current = items[index];
 
 	return (
 		<div className="w-full overflow-hidden rounded-2xl shadow-md bg-white border-none">
 			{/* IMAGE SLIDER */}
-			<div className="relative">
+			<div className="relative group">
 				<img
 					alt={current.title}
 					className="w-full h-80 object-cover transition-all duration-300"
@@ -155,16 +170,15 @@ function SectionCard({
 
 				{items.length > 1 && (
 					<>
-						{/* Always visible arrows with low opacity */}
 						<button
 							onClick={prev}
-							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-70 hover:opacity-100 hover:bg-accent transition-opacity"
 						>
 							‹
 						</button>
 						<button
 							onClick={next}
-							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-70 hover:opacity-100 hover:bg-accent transition-opacity"
 						>
 							›
 						</button>
