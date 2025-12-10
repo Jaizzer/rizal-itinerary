@@ -78,7 +78,7 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 			</div>
 
 			{/* People Grid */}
-			<PeopleGrid people={tour.peopleWithImages} title="People with Him" />
+			<PeopleGrid people={tour.peopleWithImages} title="People" />
 
 			{tour.womenWithImages && (
 				<PeopleGrid people={tour.womenWithImages} title="Women He Met" />
