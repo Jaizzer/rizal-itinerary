@@ -1,10 +1,11 @@
 import type { JSX } from 'react';
+import { useState } from 'react';
 
 import { FaHotel, FaMapMarkedAlt, FaMonument, FaUtensils } from 'react-icons/fa';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { MdAttractions, MdDirectionsBus, MdOutlineWork } from 'react-icons/md';
 
-import tourDetailData, { type Person, type TourDetail } from './tourDetailData';
+import tourDetailData, { type Person, type TourDetail, type MediaItem } from './tourDetailData';
 
 export default function TourDetail({ id }: { id?: string }): JSX.Element {
 	const tour: TourDetail | undefined = tourDetailData.find((t) => t.id === id);
@@ -22,16 +23,18 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 
 	return (
 		<div className="max-w-[1024px] mx-auto p-10 grid gap-10">
-			{/* Banner */}
-			<div className="relative">
-				<img
-					alt={tour.name}
-					className="w-full rounded-2xl object-cover h-64 md:h-96"
-					src={tour.image}
-				/>
-				<h1 className="absolute bottom-4 left-4 text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
-					{tour.name}
-				</h1>
+			{/* Banner + Description */}
+			<div className="grid gap-6 md:grid-cols-2 items-center">
+				{/* MAIN IMAGE SLIDER */}
+				<ImageSlider images={tour.main} title={tour.name} />
+
+				{/* Description */}
+				<div className="grid gap-4 p-2 md:p-4 self-start md:self-center">
+					<h2 className="text-xl md:text-2xl font-semibold text-accent">Overview</h2>
+					<p className="text-gray-700 text-sm md:text-base leading-relaxed">
+						{tour.description}
+					</p>
+				</div>
 			</div>
 
 			{/* Overview */}
@@ -58,48 +61,25 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 
 			{/* Sections */}
 			<div className="grid gap-6 md:grid-cols-2">
+				<SectionCard title="Hotels / Lodging" icon={<FaHotel />} items={tour.hotels} />
 				<SectionCard
-					content={tour.hotels}
-					icon={<FaHotel />}
-					image={tour.hotelsImage}
-					title="Hotels / Lodging"
-				/>
-				<SectionCard
-					content={tour.attractions}
-					icon={<MdAttractions />}
-					image={tour.attractionsImage}
 					title="Tourist Attractions"
+					icon={<MdAttractions />}
+					items={tour.attractions}
 				/>
+				<SectionCard title="Monuments" icon={<FaMonument />} items={tour.monuments} />
 				<SectionCard
-					content={tour.monuments}
-					icon={<FaMonument />}
-					image={tour.monumentsImage}
-					title="Monuments"
-				/>
-				<SectionCard
-					content={tour.transportation}
-					icon={<MdDirectionsBus />}
-					image={tour.transportationImage}
 					title="Transportation"
+					icon={<MdDirectionsBus />}
+					items={tour.transportation}
 				/>
-				<SectionCard
-					content={tour.food}
-					icon={<FaUtensils />}
-					image={tour.foodImage}
-					title="Food"
-				/>
-				<SectionCard
-					content={tour.works}
-					icon={<MdOutlineWork />}
-					image={tour.worksImage}
-					title="Works Done"
-				/>
+				<SectionCard title="Food" icon={<FaUtensils />} items={tour.food} />
+				<SectionCard title="Works Done" icon={<MdOutlineWork />} items={tour.works} />
 			</div>
 
 			{/* People Grid */}
 			<PeopleGrid people={tour.peopleWithImages} title="People with Him" />
 
-			{/* Women */}
 			{tour.womenWithImages && (
 				<PeopleGrid people={tour.womenWithImages} title="Women He Met" />
 			)}
@@ -107,7 +87,104 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 	);
 }
 
-/* ------------------------- COMPONENT: PEOPLE GRID ------------------------- */
+/* ------------------------- IMAGE SLIDER ------------------------- */
+function ImageSlider({ images, title }: { images: string[]; title: string }) {
+	const [index, setIndex] = useState(0);
+
+	const next = () => setIndex((i) => (i + 1) % images.length);
+	const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
+
+	return (
+		<div className="relative group">
+			<img
+				alt={title}
+				src={images[index]}
+				className="w-full rounded-2xl object-cover h-64 md:h-96 transition-all duration-300"
+			/>
+
+			{/* Buttons */}
+			{images.length > 1 && (
+				<>
+					{/* PREV BUTTON */}
+					<button
+						onClick={prev}
+						className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent hover:bg-accent transition-opacity"
+					>
+						‹
+					</button>
+
+					{/* NEXT BUTTON */}
+					<button
+						onClick={next}
+						className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent hover:bg-accent transition-opacity"
+					>
+						›
+					</button>
+				</>
+			)}
+		</div>
+	);
+}
+
+/* ------------------------- SECTION CARD (MULTI-SLIDE) ------------------------- */
+function SectionCard({
+	title,
+	icon,
+	items,
+}: {
+	title: string;
+	icon: JSX.Element;
+	items: MediaItem[];
+}): JSX.Element {
+	const [index, setIndex] = useState(0);
+
+	const next = () => setIndex((i) => (i + 1) % items.length);
+	const prev = () => setIndex((i) => (i - 1 + items.length) % items.length);
+
+	const current = items[index];
+
+	return (
+		<div className="w-full overflow-hidden rounded-2xl shadow-md bg-white border-none">
+			{/* IMAGE SLIDER */}
+			<div className="relative">
+				<img
+					alt={current.title}
+					className="w-full h-80 object-cover transition-all duration-300"
+					src={current.image}
+				/>
+
+				{items.length > 1 && (
+					<>
+						{/* Always visible arrows with low opacity */}
+						<button
+							onClick={prev}
+							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+						>
+							‹
+						</button>
+						<button
+							onClick={next}
+							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+						>
+							›
+						</button>
+					</>
+				)}
+			</div>
+
+			{/* TEXT */}
+			<div className="p-8 grid gap-3">
+				<h3 className="text-xl font-bold flex items-center gap-2 leading-tight">
+					<span className="text-accent">{icon}</span>
+					{title}
+				</h3>
+				<p className="text-sm text-gray-700">{current.title}</p>
+			</div>
+		</div>
+	);
+}
+
+/* ------------------------- PEOPLE GRID ------------------------- */
 function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX.Element {
 	return (
 		<div>
@@ -115,7 +192,8 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX
 				<IoPeopleCircle className="text-accent" size={28} />
 				{title}
 			</h2>
-			<div className="flex gap-10">
+
+			<div className="flex gap-10 flex-wrap">
 				{people.map((person) => (
 					<div className="text-center grid justify-items-center gap-1" key={person.name}>
 						<img
@@ -129,32 +207,6 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX
 						)}
 					</div>
 				))}
-			</div>
-		</div>
-	);
-}
-
-/* ------------------------- COMPONENT: SECTION CARD ------------------------- */
-function SectionCard({
-	content,
-	icon,
-	image,
-	title,
-}: {
-	content: string;
-	icon: JSX.Element;
-	image: string;
-	title: string;
-}): JSX.Element {
-	return (
-		<div className="w-full overflow-hidden rounded-2xl shadow-md bg-white border-none">
-			<img alt={title} className="w-full h-80 object-cover" src={image} />
-			<div className="p-8 grid gap-3">
-				<h3 className="text-xl font-bold flex items-center gap-2 leading-tight">
-					<span className="text-accent">{icon}</span>
-					{title}
-				</h3>
-				<p className="text-sm text-gray-700">{content}</p>
 			</div>
 		</div>
 	);
