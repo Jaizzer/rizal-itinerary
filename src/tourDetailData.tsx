@@ -386,6 +386,42 @@ import brusselsPerson5 from './assets/brussels/person-5.jpg'; // Gambling Filipi
 
 // WOMEN
 
+// --- HONG KONG IMPORTS (NEW) ---
+// MAIN IMAGES
+import hongkongMain1 from './assets/hongkong/main-1.jpg';
+import hongkongMain2 from './assets/hongkong/main-2.jpg';
+
+// TRANSPORTATION
+import hongkongTransport1 from './assets/hongkong/transport-1.jpg'; // Steamer Melbourne
+
+// LODGING / HOTELS
+import hongkongLodging1 from './assets/hongkong/lodging-1.jpg'; // 5 D’ Aguilar Street
+
+// ATTRACTIONS
+import hongkongAttraction1 from './assets/hongkong/attraction-1.jpg'; // Victoria Peak
+import hongkongAttraction2 from './assets/hongkong/attraction-2.jpg'; // Star Ferry/Harbor
+import hongkongAttraction3 from './assets/hongkong/attraction-3.jpg'; // Temple/Cultural site
+
+// FOOD
+import hongkongFood1 from './assets/hongkong/food-1.jpg'; // Dim Sum
+import hongkongFood2 from './assets/hongkong/food-2.jpg'; // Wonton noodles
+import hongkongFood3 from './assets/hongkong/food-3.jpg'; // Pineapple bun
+import hongkongFood4 from './assets/hongkong/food-4.jpg';
+import hongkongFood5 from './assets/hongkong/food-5.jpg';
+
+// WORKS
+import hongkongWork1 from './assets/hongkong/work-1.jpg'; // Writing third novel
+import hongkongWork2 from './assets/hongkong/work-2.jpg'; // Clinic practice
+import hongkongWork3 from './assets/hongkong/work-3.jpg'; // Constitution for La Liga
+
+// PEOPLE
+import hongkongPerson1 from './assets/hongkong/person-1.jpg'; // Jose Basa
+import hongkongPerson2 from './assets/hongkong/person-2.jpg'; // Brother Paciano
+import hongkongPerson3 from './assets/hongkong/person-3.jpg'; // Father/Mother
+import hongkongPerson5 from './assets/hongkong/person-5.jpg'; // Jose Ma. Basa (for the clinic)
+
+// WOMEN
+
 export interface MediaItem {
 	title: string;
 	image: string;
@@ -1126,6 +1162,76 @@ const tourDetails: TourDetail[] = [
 				image: brusselsPerson5,
 				name: 'Suzanne Jacoby',
 				role: 'Love Interest',
+			},
+		],
+	},
+
+	{
+		id: 'hongkong',
+		name: 'Hong Kong',
+		duration: '7 months (Nov 1891 - June 1892)',
+		price: '₱6,000',
+		location: 'Victoria Colony, British Hong Kong',
+
+		main: [hongkongMain1, hongkongMain2],
+
+		description:
+			'After publishing El Filibusterismo, Rizal left Europe and established a medical practice in Hong Kong. This period was marked by two significant events: the joyful family reunion before Christmas 1891, which was one of the happiest moments of his life, and his preparation for returning to the Philippines. He became a well-known ophthalmologist in the colony and drafted the constitution for the civic organization, La Liga Filipina.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Victoria Peak (Overlooking the Harbor)', image: hongkongAttraction1 },
+			{ title: 'Star Ferry and Victoria Harbour', image: hongkongAttraction2 },
+			{ title: 'Man Mo Temple (Cultural Site)', image: hongkongAttraction3 },
+		],
+
+		hotels: [
+			// Rizal's Residences/Clinic (Historical Context)
+			{ title: 'Victoria Hotel', image: hongkongLodging1 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (Hong Kong/Cantonese Specialties)
+			{ title: 'Dim Sum (Various Baskets)', image: hongkongFood1 },
+			{ title: 'Wonton Noodle Soup', image: hongkongFood2 },
+			{ title: 'Pineapple Bun (Bo lo bao)', image: hongkongFood3 },
+			{ title: 'Hong Kong-style Milk Tea', image: hongkongFood4 },
+			{ title: 'Egg Tarts (Dan tat)', image: hongkongFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'USS Zafiro', image: hongkongTransport1 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Ophthalmology Practice (Highly successful)', image: hongkongWork1 },
+			{ title: 'Drafting the Constitution of La Liga Filipina', image: hongkongWork2 },
+			{ title: 'Began writing his third novel (Makamisa, etc.)', image: hongkongWork3 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: hongkongPerson1,
+				name: 'Jose Ma. Basa',
+				role: 'Host and Fellow Expatriate',
+			},
+			{
+				image: hongkongPerson2,
+				name: 'Josephine Bracken',
+				role: 'Love Interest',
+			},
+			{
+				image: hongkongPerson3,
+				name: 'Silvestre Ubaldo',
+				role: 'Brother-in-law',
+			},
+			{
+				image: hongkongPerson5,
+				name: 'Dr. Lorenzo Marques',
+				role: 'Portuguese Ophthalmologist (Friend/Colleague)',
 			},
 		],
 	},

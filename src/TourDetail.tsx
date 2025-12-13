@@ -114,7 +114,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 	};
 
 	return (
-		<div className="relative">
+		<div className="relative group">
 			<img
 				src={images[index]}
 				alt={title}
@@ -125,13 +125,19 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 				<>
 					<button
 						onClick={prev}
-						className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+						className="absolute left-2 top-1/2 -translate-y-1/2
+						bg-black/50 text-white px-3 py-1 rounded
+						opacity-60 group-hover:opacity-100
+						hover:bg-accent transition-all"
 					>
 						‹
 					</button>
 					<button
 						onClick={next}
-						className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+						className="absolute right-2 top-1/2 -translate-y-1/2
+						bg-black/50 text-white px-3 py-1 rounded
+						opacity-60 group-hover:opacity-100
+						hover:bg-accent transition-all"
 					>
 						›
 					</button>
@@ -165,20 +171,26 @@ function SectionCard({
 
 	return (
 		<div className="bg-white rounded-2xl shadow-md overflow-hidden">
-			<div className="relative">
+			<div className="relative group">
 				<img src={current.image} alt={current.title} className="w-full h-80 object-cover" />
 
 				{items.length > 1 && (
 					<>
 						<button
 							onClick={prev}
-							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+							className="absolute left-2 top-1/2 -translate-y-1/2
+							bg-black/50 text-white px-3 py-1 rounded
+							opacity-60 group-hover:opacity-100
+							hover:bg-accent transition-all"
 						>
 							‹
 						</button>
 						<button
 							onClick={next}
-							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
+							className="absolute right-2 top-1/2 -translate-y-1/2
+							bg-black/50 text-white px-3 py-1 rounded
+							opacity-60 group-hover:opacity-100
+							hover:bg-accent transition-all"
 						>
 							›
 						</button>
