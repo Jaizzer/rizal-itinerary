@@ -23,48 +23,31 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 	}
 
 	return (
-		<div className="max-w-[1024px] mx-auto p-10 grid gap-5 md:gap-10">
-			{/* Banner + Description */}
+		<div className="max-w-[1024px] mx-auto p-10 grid gap-8">
+			{/* Banner + Overview */}
 			<div className="grid gap-6 md:grid-cols-2 items-center">
 				<ImageSlider images={tour.main} title={tour.name} />
 
-				<div className="grid gap-4 pt-2 md:p-4 self-start md:self-center">
+				<div className="grid gap-4">
 					<h2 className="text-xl md:text-2xl font-semibold text-accent">Overview</h2>
-					<p className="text-gray-700 text-sm md:text-base leading-relaxed">
-						{tour.description}
-					</p>
+					<p className="text-gray-700 leading-relaxed">{tour.description}</p>
 				</div>
 			</div>
 
-			{/* Overview */}
+			{/* Meta Info */}
 			<div className="grid gap-4 md:grid-cols-3">
-				<div>
-					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
-						<FaMapMarkedAlt className="text-accent" /> Duration
-					</h3>
-					<p className="text-sm md:text-base">{tour.duration}</p>
-				</div>
-				<div>
-					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
-						<MdAttractions className="text-accent" /> Location
-					</h3>
-					<p className="text-sm md:text-base">{tour.location}</p>
-				</div>
-				<div>
-					<h3 className="text-md md:text-xl font-semibold flex items-center gap-2">
-						<FaUtensils className="text-accent" /> Price
-					</h3>
-					<p className="text-sm md:text-base">{tour.price}</p>
-				</div>
+				<Meta icon={<FaMapMarkedAlt />} label="Duration" value={tour.duration} />
+				<Meta icon={<MdAttractions />} label="Location" value={tour.location} />
+				<Meta icon={<FaUtensils />} label="Price" value={tour.price} />
 			</div>
 
-			{/* Sections */}
+			{/* Content Sections */}
 			<div className="grid gap-6 md:grid-cols-2">
-				{tour.hotels?.length > 0 && (
+				{tour.hotels && tour.hotels.length > 0 && (
 					<SectionCard title="Hotels / Lodging" icon={<FaHotel />} items={tour.hotels} />
 				)}
 
-				{tour.attractions?.length > 0 && (
+				{tour.attractions && tour.attractions.length > 0 && (
 					<SectionCard
 						title="Tourist Attractions"
 						icon={<MdAttractions />}
@@ -72,11 +55,11 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 					/>
 				)}
 
-				{tour.monuments?.length > 0 && (
+				{tour.monuments && tour.monuments.length > 0 && (
 					<SectionCard title="Monuments" icon={<FaMonument />} items={tour.monuments} />
 				)}
 
-				{tour.transportation?.length > 0 && (
+				{tour.transportation && tour.transportation.length > 0 && (
 					<SectionCard
 						title="Transportation"
 						icon={<MdDirectionsBus />}
@@ -84,23 +67,36 @@ export default function TourDetail({ id }: { id?: string }): JSX.Element {
 					/>
 				)}
 
-				{tour.food?.length > 0 && (
+				{tour.food && tour.food.length > 0 && (
 					<SectionCard title="Food" icon={<FaUtensils />} items={tour.food} />
 				)}
 
-				{tour.works?.length > 0 && (
+				{tour.works && tour.works.length > 0 && (
 					<SectionCard title="Activities" icon={<MdOutlineWork />} items={tour.works} />
 				)}
 			</div>
 
 			{/* People */}
-			{tour.peopleWithImages?.length > 0 && (
-				<PeopleGrid people={tour.peopleWithImages} title="People" />
+			{tour.peopleWithImages && tour.peopleWithImages.length > 0 && (
+				<PeopleGrid title="People" people={tour.peopleWithImages} />
 			)}
 
-			{tour.womenWithImages?.length > 0 && (
-				<PeopleGrid people={tour.womenWithImages} title="Women He Met" />
+			{tour.womenWithImages && tour.womenWithImages.length > 0 && (
+				<PeopleGrid title="Women He Met" people={tour.womenWithImages} />
 			)}
+		</div>
+	);
+}
+
+/* ------------------------- META ------------------------- */
+function Meta({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) {
+	return (
+		<div>
+			<h3 className="font-semibold flex items-center gap-2">
+				<span className="text-accent">{icon}</span>
+				{label}
+			</h3>
+			<p className="text-gray-700">{value}</p>
 		</div>
 	);
 }
@@ -118,24 +114,24 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 	};
 
 	return (
-		<div className="relative group">
+		<div className="relative">
 			<img
-				alt={title}
 				src={images[index]}
-				className="w-full rounded-2xl object-cover h-64 md:h-96 transition-all duration-300"
+				alt={title}
+				className="w-full h-64 md:h-96 object-cover rounded-2xl"
 			/>
 
 			{images.length > 1 && (
 				<>
 					<button
 						onClick={prev}
-						className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+						className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
 					>
 						‹
 					</button>
 					<button
 						onClick={next}
-						className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-80 hover:opacity-100 hover:bg-accent transition-opacity"
+						className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
 					>
 						›
 					</button>
@@ -154,7 +150,7 @@ function SectionCard({
 	title: string;
 	icon: JSX.Element;
 	items: MediaItem[];
-}): JSX.Element {
+}) {
 	const [index, setIndex] = useState(0);
 
 	const next = () => {
@@ -168,21 +164,21 @@ function SectionCard({
 	const current = items[index];
 
 	return (
-		<div className="w-full overflow-hidden rounded-2xl shadow-md bg-white">
-			<div className="relative group">
-				<img alt={current.title} className="w-full h-80 object-cover" src={current.image} />
+		<div className="bg-white rounded-2xl shadow-md overflow-hidden">
+			<div className="relative">
+				<img src={current.image} alt={current.title} className="w-full h-80 object-cover" />
 
 				{items.length > 1 && (
 					<>
 						<button
 							onClick={prev}
-							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-70 hover:opacity-100 hover:bg-accent transition-opacity"
+							className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
 						>
 							‹
 						</button>
 						<button
 							onClick={next}
-							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-md opacity-70 hover:opacity-100 hover:bg-accent transition-opacity"
+							className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded"
 						>
 							›
 						</button>
@@ -190,21 +186,21 @@ function SectionCard({
 				)}
 			</div>
 
-			<div className="p-8 grid gap-3">
+			<div className="p-6">
 				<h3 className="text-xl font-bold flex items-center gap-2">
 					<span className="text-accent">{icon}</span>
 					{title}
 				</h3>
-				<p className="text-sm text-gray-700">{current.title}</p>
+				<p className="text-gray-700 mt-2">{current.title}</p>
 			</div>
 		</div>
 	);
 }
 
 /* ------------------------- PEOPLE GRID ------------------------- */
-function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX.Element {
+function PeopleGrid({ people, title }: { people: Person[]; title: string }) {
 	return (
-		<div className="bg-white shadow-md rounded-3xl p-8 w-full">
+		<div className="bg-white rounded-3xl shadow-md p-8">
 			<h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
 				<IoPeopleCircle className="text-accent" size={28} />
 				{title}
@@ -212,16 +208,14 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }): JSX
 
 			<div className="flex flex-wrap gap-6">
 				{people.map((person) => (
-					<div key={person.name} className="flex flex-col items-center gap-1 w-28">
+					<div key={person.name} className="w-28 text-center">
 						<img
-							alt={person.name}
-							className="w-28 h-28 object-cover rounded-full shadow-md border border-secondary"
 							src={person.image}
+							alt={person.name}
+							className="w-28 h-28 rounded-full object-cover shadow-md"
 						/>
-						<p className="font-medium text-base text-center">{person.name}</p>
-						{person.role && (
-							<p className="text-sm text-gray-500 text-center">{person.role}</p>
-						)}
+						<p className="font-medium mt-2">{person.name}</p>
+						{person.role && <p className="text-sm text-gray-500">{person.role}</p>}
 					</div>
 				))}
 			</div>
