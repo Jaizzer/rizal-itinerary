@@ -475,7 +475,6 @@ import usaTransport3 from './assets/usa/transport-3.jpg';
 // LODGING / HOTELS
 import usaLodging1 from './assets/usa/lodging-1.jpg'; // Palace Hotel (SF)
 import usaLodging2 from './assets/usa/lodging-2.jpg'; // Boarding house
-import usaLodging3 from './assets/usa/lodging-3.jpg'; // Hotel in NY
 
 // ATTRACTIONS
 import usaAttraction1 from './assets/usa/attraction-1.jpg'; // Golden Gate Bridge (modern landmark)
