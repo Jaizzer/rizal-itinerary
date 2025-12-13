@@ -253,6 +253,49 @@ import berlinPerson3 from './assets/berlin/person-3.jpg'; // Dr. Karl Ernst
 import berlinPerson4 from './assets/berlin/person-4.jpg'; // Maximo Viola
 import berlinPerson5 from './assets/berlin/person-5.jpg'; // Dr. Hans Virchow
 
+// --- LEIPZIG IMPORTS (NEW) ---
+// MAIN IMAGES
+import leipzigMain1 from './assets/leipzig/main-1.jpg';
+import leipzigMain2 from './assets/leipzig/main-2.jpg';
+
+// TRANSPORTATION
+import leipzigTransport1 from './assets/leipzig/transport-1.jpg';
+import leipzigTransport2 from './assets/leipzig/transport-2.jpg';
+import leipzigTransport3 from './assets/leipzig/transport-3.jpg';
+
+// LODGING / HOTELS
+import leipzigLodging1 from './assets/leipzig/lodging-1.jpg';
+import leipzigLodging2 from './assets/leipzig/lodging-2.jpg';
+import leipzigLodging3 from './assets/leipzig/lodging-3.jpg';
+
+// ATTRACTIONS
+import leipzigAttraction1 from './assets/leipzig/attraction-1.jpg';
+import leipzigAttraction2 from './assets/leipzig/attraction-2.jpg';
+import leipzigAttraction3 from './assets/leipzig/attraction-3.jpg';
+import leipzigAttraction4 from './assets/leipzig/attraction-4.jpg';
+import leipzigAttraction5 from './assets/leipzig/attraction-5.jpg';
+
+// FOOD
+import leipzigFood1 from './assets/leipzig/food-1.jpg';
+import leipzigFood2 from './assets/leipzig/food-2.jpg';
+import leipzigFood3 from './assets/leipzig/food-3.jpg';
+import leipzigFood4 from './assets/leipzig/food-4.jpg';
+import leipzigFood5 from './assets/leipzig/food-5.jpg';
+
+// WORKS
+import leipzigWork1 from './assets/leipzig/work-1.jpg';
+import leipzigWork2 from './assets/leipzig/work-2.jpg';
+import leipzigWork3 from './assets/leipzig/work-3.jpg';
+import leipzigWork4 from './assets/leipzig/work-4.jpg';
+import leipzigWork5 from './assets/leipzig/work-5.jpg';
+
+// PEOPLE
+import leipzigPerson1 from './assets/leipzig/person-1.jpg'; // Prof. Friedrich Ratzel
+import leipzigPerson2 from './assets/leipzig/person-2.jpg'; // Dr. Hans Meyer
+import leipzigPerson3 from './assets/leipzig/person-3.jpg'; // Other students/acquaintances
+import leipzigPerson4 from './assets/leipzig/person-4.jpg'; // Publishing firm contacts
+import leipzigPerson5 from './assets/leipzig/person-5.jpg'; // University contacts
+
 export interface MediaItem {
 	title: string;
 	image: string;
@@ -729,6 +772,64 @@ const tourDetails: TourDetail[] = [
 				image: berlinPerson5,
 				name: 'Dr. Hans Virchow',
 				role: 'Anatomist & Ethnologist',
+			},
+		],
+		womenWithImages: [],
+	},
+	{
+		id: 'leipzig',
+		name: 'Leipzig, Germany',
+		duration: '2.5 months (Aug - Oct 1886)',
+		price: '₱3,500',
+		location: 'Leipzig, Saxony, Germany',
+
+		main: [leipzigMain1, leipzigMain2],
+
+		description:
+			'Rizal arrived in Leipzig on August 14, 1886, seeking a cheap place to live and work. The city had the lowest cost of living in Europe, allowing him to save money. During his stay, he engaged in intensive academic work, correcting chapters of Noli Me Tángere, working as a proof-reader, and translating significant German and Danish literary works, including William Tell and Hans Christian Andersen’s Fairy Tales.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'St. Thomas Church (Thomaskirche)', image: leipzigAttraction1 },
+			{ title: 'Leipzig University', image: leipzigAttraction2 },
+			{ title: 'The Old Town Hall (Altes Rathaus)', image: leipzigAttraction3 },
+			{ title: 'St. Nicholas Church (Nikolaikirche)', image: leipzigAttraction4 },
+			{ title: 'Museum of Fine Arts (MdbK)', image: leipzigAttraction5 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (Traditional Leipzig/Saxon)
+			{ title: 'Leipziger Allerlei (Vegetable Dish)', image: leipzigFood1 },
+			{ title: 'Leipziger Lerche (Pastry)', image: leipzigFood2 },
+			{ title: 'Saxon Potato Soup', image: leipzigFood3 },
+			{ title: 'Kaffee und Kuchen (Coffee and Cake)', image: leipzigFood4 },
+			{ title: 'Gose Beer (Local Specialty)', image: leipzigFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Train travel (To and from Dresden)', image: berlinTransport1 },
+			{ title: 'Horse-drawn Streetcar (Tram)', image: berlinTransport2 },
+			{ title: 'Local Stagecoach (Inter-city travel)', image: berlinTransport5 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Translated William Tell (German to Filipino)', image: leipzigWork1 },
+			{ title: 'Translated Hans Christian Andersen’s Fairy Tales', image: leipzigWork2 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: leipzigPerson1,
+				name: 'Prof. Friedrich Ratzel',
+				role: 'Famous German Historian',
+			},
+			{
+				image: leipzigPerson2,
+				name: 'Dr. Hans Meyer',
+				role: 'German Anthropologist',
 			},
 		],
 		womenWithImages: [],
