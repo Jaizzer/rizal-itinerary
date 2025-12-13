@@ -63,7 +63,7 @@ export default function HomePage(): JSX.Element {
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
 									<p className="text-sm">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Rizal won a lottery in Dapitan.
 									</p>
 								</div>
 							</li>
@@ -74,7 +74,7 @@ export default function HomePage(): JSX.Element {
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
 									<p className="text-sm">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Rizal's one-month sea voyage now takes a single 14-hour flight.
 									</p>
 								</div>
 							</li>
@@ -85,7 +85,7 @@ export default function HomePage(): JSX.Element {
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
 									<p className="text-sm">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Rizal is a Master Mason.
 									</p>
 								</div>
 							</li>
