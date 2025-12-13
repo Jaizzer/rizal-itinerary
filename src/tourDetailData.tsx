@@ -125,6 +125,52 @@ import madridPerson4 from './assets/madrid/person-4.jpg';
 import madridPerson5 from './assets/madrid/person-5.jpg';
 import madridWoman1 from './assets/madrid/woman-1.jpg';
 
+// --- PARIS IMPORTS (INTEGRATED AND CLEANED) ---
+
+// MAIN IMAGES
+import parisMain1 from './assets/paris/main-1.jpg';
+import parisMain2 from './assets/paris/main-2.jpg';
+
+// TRANSPORTATION
+import parisTransport1 from './assets/paris/transport-1.jpg';
+import parisTransport2 from './assets/paris/transport-2.jpg';
+import parisTransport3 from './assets/paris/transport-3.jpg';
+import parisTransport4 from './assets/paris/transport-4.jpg';
+
+// LODGING / HOTELS
+import parisLodging1 from './assets/paris/lodging-1.jpg';
+import parisLodging2 from './assets/paris/lodging-2.jpg';
+import parisLodging3 from './assets/paris/lodging-3.jpg'; // Using this for the 3rd lodging type
+
+// ATTRACTIONS
+import parisAttraction1 from './assets/paris/attraction-1.jpg';
+import parisAttraction2 from './assets/paris/attraction-2.jpg';
+import parisAttraction3 from './assets/paris/attraction-3.jpg';
+import parisAttraction4 from './assets/paris/attraction-4.jpg';
+import parisAttraction5 from './assets/paris/attraction-5.jpg';
+
+// FOOD
+import parisFood1 from './assets/paris/food-1.jpg';
+import parisFood2 from './assets/paris/food-2.jpg';
+import parisFood3 from './assets/paris/food-3.jpg';
+import parisFood4 from './assets/paris/food-4.jpg';
+import parisFood5 from './assets/paris/food-5.jpg';
+
+// WORKS
+import parisWork1 from './assets/paris/work-1.jpg';
+import parisWork2 from './assets/paris/work-2.jpg';
+import parisWork3 from './assets/paris/work-3.jpg';
+import parisWork4 from './assets/paris/work-4.jpg';
+import parisWork5 from './assets/paris/work-5.jpg';
+
+// PEOPLE
+import parisPerson1 from './assets/paris/person-1.jpg';
+import parisPerson2 from './assets/paris/person-2.jpg';
+import parisPerson3 from './assets/paris/person-3.jpg';
+import parisPerson4 from './assets/paris/person-4.jpg';
+import parisPerson5 from './assets/paris/person-5.jpg';
+// --- END OF PARIS IMPORTS ---
+
 export interface MediaItem {
 	title: string;
 	image: string;
@@ -317,9 +363,7 @@ const tourDetails: TourDetail[] = [
 			{ title: 'Jamon and Manchego Cheese', image: madridFood3 },
 		],
 
-		transportation: [
-			{ title: 'Puerta del Sol Tram/Streetcar', image: madridTransport1 },
-		],
+		transportation: [{ title: 'Puerta del Sol Tram/Streetcar', image: madridTransport1 }],
 
 		works: [
 			{ title: 'Medicine and Philosophy & Letters (University Courses)', image: madridWork1 },
@@ -362,6 +406,86 @@ const tourDetails: TourDetail[] = [
 				role: 'Love Interest',
 			},
 		],
+	},
+	{
+		id: 'paris',
+		name: 'Paris, France',
+		duration: 'Multiple Visits (1883, 1889-1890)',
+		price: '₱8,000',
+		location: 'Paris, France',
+
+		main: [parisMain1, parisMain2], // Changed from parisSecondMain
+
+		description:
+			'Rizal visited Paris multiple times, with his stay in 1889-1890 being the most crucial for the Propaganda Movement. It coincided with the Paris Exposition Universelle (World’s Fair), which he used as a backdrop for historical research. This highly productive period saw him publish his annotated edition of Antonio de Morga’s Sucesos de las Islas Filipinas and establish key patriotic organizations like the Kidlat Club and Indios Bravos.',
+
+		attractions: [
+			{ title: 'Eiffel Tower', image: parisAttraction1 }, // Changed from parisSecondAttraction
+			{ title: 'Bibliothèque Nationale (Research)', image: parisAttraction2 },
+			{ title: 'Louvre Museum (Art & History Study)', image: parisAttraction3 },
+			{ title: 'Cathedral of Notre Dame', image: parisAttraction4 },
+			{ title: 'Palace of Versailles', image: parisAttraction5 },
+		],
+
+		hotels: [
+			// Using the new clean names
+			{ title: 'Boarding House (1889-1890 Research Period)', image: parisLodging1 },
+			{ title: 'Apartment on Rue de Maubeuge', image: parisLodging2 },
+			{ title: 'Hotel de Paris (First Visit, 1883)', image: parisLodging3 }, // Using 3 for the third type
+		],
+
+		food: [
+			// UPDATED: Current popular Parisian foods
+			{ title: 'Croque', image: parisFood1 },
+			{ title: 'Steak Frites', image: parisFood2 },
+			{ title: "French Onion Soup (Soupe à l'Oignon)", image: parisFood3 },
+			{ title: 'Escargots', image: parisFood4 },
+			{ title: 'Croissants and Macarons', image: parisFood5 },
+		],
+
+		transportation: [
+			{ title: 'Train from Madrid', image: parisTransport1 },
+			{ title: 'Paris Métro (Public Transport)', image: parisTransport2 },
+			{ title: 'Horse-drawn Omni-bus', image: parisTransport3 },
+			{ title: 'Bicycle (Personal Transport)', image: parisTransport4 },
+		],
+
+		works: [
+			{ title: 'Annotation of Morga’s Sucesos de las Islas Filipinas', image: parisWork1 },
+			{ title: 'Founded the Kidlat Club & Indios Bravos', image: parisWork2 },
+			{ title: 'Master Mason Diploma (Le Grand Orient de France)', image: parisWork4 },
+			{ title: 'Articles for La Solidaridad', image: parisWork5 },
+		],
+
+		peopleWithImages: [
+			// The 5 most influential Filipino contacts
+			{
+				image: parisPerson1,
+				name: 'Dr. Trinidad H. Pardo de Tavera',
+				role: 'Scholar and Historian',
+			},
+			{
+				image: parisPerson2,
+				name: 'Juan Luna',
+				role: 'Artist and Propagandist',
+			},
+			{
+				image: parisPerson3,
+				name: 'Felix Hidalgo',
+				role: 'Artist and Friend',
+			},
+			{
+				image: parisPerson4,
+				name: 'Gregorio Sanciangco',
+				role: 'Economist and Reformer',
+			},
+			{
+				image: parisPerson5,
+				name: 'Valentine Ventura',
+				role: 'Patron and Friend',
+			},
+		],
+		womenWithImages: [],
 	},
 ];
 
