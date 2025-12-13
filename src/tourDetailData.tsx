@@ -88,6 +88,43 @@ import barcelonaWork1 from './assets/barcelona/work-1.jpg';
 // PEOPLE
 import barcelonaPerson1 from './assets/barcelona/person-1.jpg';
 
+// --- MADRID IMPORTS (NEW) ---
+// MAIN IMAGES
+import madridMain1 from './assets/madrid/main-1.jpg';
+import madridMain2 from './assets/madrid/main-2.jpg';
+
+// TRANSPORTATION
+import madridTransport1 from './assets/madrid/transport-1.jpg';
+import madridTransport2 from './assets/madrid/transport-2.jpg';
+
+// LODGING / HOTELS
+import madridLodging1 from './assets/madrid/lodging-1.jpg';
+import madridLodging2 from './assets/madrid/lodging-2.jpg';
+import madridLodging3 from './assets/madrid/lodging-3.jpg';
+
+// ATTRACTIONS
+import madridAttraction1 from './assets/madrid/attraction-1.jpg';
+import madridAttraction2 from './assets/madrid/attraction-2.jpg';
+import madridAttraction3 from './assets/madrid/attraction-3.jpg';
+
+// FOOD
+import madridFood1 from './assets/madrid/food-1.jpg';
+import madridFood2 from './assets/madrid/food-2.jpg';
+import madridFood3 from './assets/madrid/food-3.jpg';
+
+// WORKS
+import madridWork1 from './assets/madrid/work-1.jpg';
+import madridWork2 from './assets/madrid/work-2.jpg';
+import madridWork3 from './assets/madrid/work-3.jpg';
+
+// PEOPLE
+import madridPerson1 from './assets/madrid/person-1.jpg';
+import madridPerson2 from './assets/madrid/person-2.jpg';
+import madridPerson3 from './assets/madrid/person-3.jpg';
+import madridPerson4 from './assets/madrid/person-4.jpg';
+import madridPerson5 from './assets/madrid/person-5.jpg';
+import madridWoman1 from './assets/madrid/woman-1.jpg';
+
 export interface MediaItem {
 	title: string;
 	image: string;
@@ -248,6 +285,81 @@ const tourDetails: TourDetail[] = [
 				image: barcelonaPerson1,
 				name: 'Eusebio Corominas',
 				role: 'Friend & Newspaper Publisher', // Publisher of Diariong Tagalog
+			},
+		],
+	},
+	{
+		id: 'madrid',
+		name: 'Madrid, Spain',
+		duration: '5 years (1882–1887)',
+		price: '₱7,000',
+		location: 'Madrid, Spain',
+
+		main: [madridMain1, madridMain2],
+
+		description:
+			'Starting November 3, 1882, Madrid was the center of Jose Rizal’s intense academic and nationalistic preparation. He enrolled simultaneously in Medicine and Philosophy and Letters at the Universidad Central de Madrid, while living a frugal life to conserve funds for his mission. It was here he began his political activities, meeting with Filipino expatriates, and published articles promoting the reform movement. This period was also marked by his brief, complicated relationship with Consuelo Ortiga y Perez.',
+
+		attractions: [
+			{ title: 'Museo Nacional del Prado', image: madridAttraction1 },
+			{ title: 'Parque del Buen Retiro', image: madridAttraction2 },
+			{ title: 'Puerta del Sol & Central Squares', image: madridAttraction3 },
+		],
+
+		hotels: [
+			{ title: 'Calle de la Visitación', image: madridLodging1 },
+			{ title: 'Calle Amor de Dios (Various Residences)', image: madridLodging3 },
+		],
+
+		food: [
+			{ title: 'Cocido Madrileño (Stew)', image: madridFood1 },
+			{ title: 'Chocolate con Churros', image: madridFood2 },
+			{ title: 'Jamon and Manchego Cheese', image: madridFood3 },
+		],
+
+		transportation: [
+			{ title: 'Puerta del Sol Tram/Streetcar', image: madridTransport1 },
+		],
+
+		works: [
+			{ title: 'Medicine and Philosophy & Letters (University Courses)', image: madridWork1 },
+			{
+				title: 'Studies in Painting and Sculpture (Academy of Fine Arts)',
+				image: madridWork3,
+			},
+			{ title: 'Lessons in French, German, and English', image: madridWork2 },
+		],
+
+		peopleWithImages: [
+			{
+				image: madridPerson1,
+				name: 'Don Pablo Ortiga y Rey',
+				role: 'Host & Former Manila Official',
+			},
+			{
+				image: madridPerson2,
+				name: 'Graciano Lopez Jaena',
+				role: 'Propaganda Movement Orator',
+			},
+			{
+				image: madridPerson3,
+				name: 'Marcelo H. del Pilar',
+				role: 'Propaganda Movement Writer',
+			},
+			{
+				image: madridPerson4,
+				name: 'Juan Luna',
+				role: 'Painter (Spoliarium)',
+			},
+			{
+				image: madridPerson5,
+				name: 'Maximo Viola',
+				role: 'Medical Student & Friend',
+			},
+			{
+				image: madridWoman1,
+				name: 'Consuelo Ortiga y Perez',
+				role: 'Love Interest',
 			},
 		],
 	},
