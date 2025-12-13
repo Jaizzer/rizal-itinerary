@@ -420,6 +420,50 @@ import hongkongPerson2 from './assets/hongkong/person-2.jpg'; // Brother Paciano
 import hongkongPerson3 from './assets/hongkong/person-3.jpg'; // Father/Mother
 import hongkongPerson5 from './assets/hongkong/person-5.jpg'; // Jose Ma. Basa (for the clinic)
 
+
+
+
+
+// --- JAPAN IMPORTS (NEW) ---
+// MAIN IMAGES
+import japanMain1 from './assets/japan/main-1.jpg';
+import japanMain2 from './assets/japan/main-2.jpg';
+
+// TRANSPORTATION
+import japanTransport2 from './assets/japan/transport-2.jpg'; // Rickshaw
+import japanTransport3 from './assets/japan/transport-3.jpg'; // Train
+import japanTransport4 from './assets/japan/transport-4.jpg'; // Train
+
+// LODGING / HOTELS
+import japanLodging1 from './assets/japan/lodging-1.jpg'; // Grand Hotel (Yokohama)
+import japanLodging2 from './assets/japan/lodging-2.jpg'; // Tokyo Hotel
+
+// ATTRACTIONS
+import japanAttraction1 from './assets/japan/attraction-1.jpg'; // Meiji Shrine
+import japanAttraction2 from './assets/japan/attraction-2.jpg'; // Imperial Palace East Garden
+import japanAttraction3 from './assets/japan/attraction-3.jpg'; // Museums
+import japanAttraction4 from './assets/japan/attraction-4.jpg'; // Nikko/Hakone Area
+import japanAttraction5 from './assets/japan/attraction-5.jpg'; // Ueno Park (Band)
+
+// FOOD
+import japanFood1 from './assets/japan/food-1.jpg'; // Sushi/Sashimi
+import japanFood2 from './assets/japan/food-2.jpg'; // Ramen
+import japanFood3 from './assets/japan/food-3.jpg'; // Tempura
+import japanFood4 from './assets/japan/food-4.jpg';
+import japanFood5 from './assets/japan/food-5.jpg';
+
+// WORKS
+import japanWork1 from './assets/japan/work-1.jpg'; // Language study
+import japanWork2 from './assets/japan/work-2.jpg'; // Cultural studies
+import japanWork3 from './assets/japan/work-3.jpg'; // Meeting orchestra
+import japanWork5 from './assets/japan/work-5.jpg'; // Diplomacy
+
+// PEOPLE
+import japanPerson1 from './assets/japan/person-1.jpg'; // Juan Perez Caballero
+import japanPerson2 from './assets/japan/person-2.jpg'; // Japanese Musicians
+
+// WOMEN
+import japanWoman1 from './assets/japan/woman-1.jpg'; // Seiko Usui (O-Sei-San)
 // WOMEN
 
 export interface MediaItem {
@@ -1232,6 +1276,80 @@ const tourDetails: TourDetail[] = [
 				image: hongkongPerson5,
 				name: 'Dr. Lorenzo Marques',
 				role: 'Portuguese Ophthalmologist (Friend/Colleague)',
+			},
+		],
+	},
+	{
+		id: 'japan',
+		name: 'Japan',
+		duration: '1.5 months (Feb 28 - Apr 13, 1888)',
+		price: '₱4,000',
+		location: 'Yokohama, Tokyo, and villages',
+
+		main: [japanMain1, japanMain2],
+
+		description:
+			'Rizal’s stay in Japan was one of the happiest interludes of his life. Charmed by the country’s natural beauty, polite people, and rich culture (drama, arts, music), he quickly learned the Japanese language. He resided at the Spanish Legation, using the time to study Japan while avoiding diplomatic conflict. This period is most famous for his brief but intense romance with Seiko Usui (O-Sei-San), which nearly tempted him to settle permanently.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Meiji Jingu (Shrine/Park)', image: japanAttraction1 },
+			{ title: 'Ginza/Imperial Palace Area', image: japanAttraction2 },
+			{ title: 'Tokyo National Museum', image: japanAttraction3 },
+			{ title: 'Nikko/Hakone (Scenic Spots)', image: japanAttraction4 },
+			{ title: 'Ueno Park (Tokyo Band Encounter)', image: japanAttraction5 },
+		],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: 'Grand Hotel (Yokohama Arrival)', image: japanLodging1 },
+			{ title: 'Tokyo Hotel (Initial Stay)', image: japanLodging2 },
+		],
+
+		food: [
+			// Modern Contextualized Foods
+			{ title: 'Sushi and Sashimi', image: japanFood1 },
+			{ title: 'Ramen', image: japanFood2 },
+			{ title: 'Tempura', image: japanFood3 },
+			{ title: 'Okonomiyaki', image: japanFood4 },
+			{ title: 'Matcha and Wagashi (Sweets)', image: japanFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'SS Oceanic', image: japanTransport2 },
+			{ title: 'Street Car', image: japanTransport3 },
+			{ title: 'Local Tram/Carriage', image: japanTransport4 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Intensive Study of Japanese Language (Spoke in days)', image: japanWork1 },
+			{ title: 'Studied Japanese drama, art, and judo', image: japanWork2 },
+			{ title: 'Met musicians (Tokyo Band)', image: japanWork3 },
+			{
+				title: 'Accepted Spanish Legation residency (Diplomatic maneuver)',
+				image: japanWork5,
+			},
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: japanPerson1,
+				name: 'Juan Perez Caballero',
+				role: 'Secretary of Spanish Legation and Friend',
+			},
+            {
+				image: japanPerson2,
+				name: 'Suehiro Tetcho',
+				role: 'Journalis/Novelist',
+			},
+			
+            {
+				image: japanWoman1,
+				name: 'Seiko Usui (O-Sei-San)',
+				role: 'Love Interlude in Japan',
 			},
 		],
 	},
