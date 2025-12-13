@@ -535,7 +535,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'singapore',
 		name: 'Singapore',
-		duration: '2 days',
+		duration: '3.5 - 4 hours',
 		price: '₱800',
 		location: 'Singapore, Straits Settlements',
 
@@ -579,7 +579,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'colombo',
 		name: 'Colombo, Sri Lanka',
-		duration: '1 day',
+		duration: '4 hours',
 		price: '₱1,200',
 		location: 'Colombo, Sri Lanka',
 
@@ -618,7 +618,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'barcelona',
 		name: 'Barcelona, Spain',
-		duration: '6 months', // Initial stay before moving to Madrid
+		duration: '13 - 14 hours', // Initial stay before moving to Madrid
 		price: '₱3,000', // Example price
 		location: 'Barcelona, Catalonia, Spain',
 
@@ -662,7 +662,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'madrid',
 		name: 'Madrid, Spain',
-		duration: '5 years (1882–1887)',
+		duration: '2.5 - 3 hours',
 		price: '₱7,000',
 		location: 'Madrid, Spain',
 
@@ -735,7 +735,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'paris',
 		name: 'Paris, France',
-		duration: 'Multiple Visits (1883, 1889-1890)',
+		duration: '10 - 11 hours',
 		price: '₱8,000',
 		location: 'Paris, France',
 
@@ -816,7 +816,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'heidelberg',
 		name: 'Heidelberg, Germany',
-		duration: '6 months (Feb - Aug 1886)',
+		duration: '3.5 - 4 hours',
 		price: '₱5,500',
 		location: 'Heidelberg & Wilhelmsfeld, Germany',
 
@@ -898,7 +898,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'berlin',
 		name: 'Berlin, Germany',
-		duration: '7 months (Nov 1886 - May 1887)',
+		duration: '4.5 - 5 hours',
 		price: '₱6,500',
 		location: 'Berlin, Germany',
 
@@ -979,7 +979,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'leipzig',
 		name: 'Leipzig, Germany',
-		duration: '2.5 months (Aug - Oct 1886)',
+		duration: '1 hour 15 minutes',
 		price: '₱3,500',
 		location: 'Leipzig, Saxony, Germany',
 
@@ -1038,7 +1038,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'dresden',
 		name: 'Dresden, Germany',
-		duration: '2 days (Oct 29-31, 1886)',
+		duration: '1 hour 10 minutes',
 		price: '₱1,500',
 		location: 'Dresden, Saxony, Germany',
 
@@ -1103,7 +1103,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'london',
 		name: 'London, England',
-		duration: '10 months (May 1888 - March 1889)',
+		duration: '4.5 - 5.5 hours',
 		price: '₱7,500',
 		location: 'London, United Kingdom',
 
@@ -1174,7 +1174,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'brussels',
 		name: 'Brussels, Belgium',
-		duration: '7 months (Jan - July 1890)',
+		duration: '2 hours 10 minutes',
 		price: '₱5,000',
 		location: 'Brussels, Belgium',
 
@@ -1243,7 +1243,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'hongkong',
 		name: 'Hong Kong',
-		duration: '7 months (Nov 1891 - June 1892)',
+		duration: '11.5 hours',
 		price: '₱6,000',
 		location: 'Victoria Colony, British Hong Kong',
 
@@ -1312,7 +1312,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'japan',
 		name: 'Japan',
-		duration: '1.5 months (Feb 28 - Apr 13, 1888)',
+		duration: '4 - 4.5 hours',
 		price: '₱4,000',
 		location: 'Yokohama, Tokyo, and villages',
 
@@ -1386,7 +1386,7 @@ const tourDetails: TourDetail[] = [
 	{
 		id: 'usa',
 		name: 'United States of America',
-		duration: '3 weeks (Apr 28 - May 16, 1888)',
+		duration: '12.5 - 13 hours',
 		price: '₱9,000',
 		location: 'San Francisco to New York (Transcontinental)',
 
