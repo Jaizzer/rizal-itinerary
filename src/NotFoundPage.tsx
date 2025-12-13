@@ -19,7 +19,7 @@ export default function NotFoundPage(): JSX.Element {
 				<button
 					className="mt-4 inline-flex items-center gap-2 bg-primary hover:bg-accent text-white font-semibold py-3 px-6 rounded-lg transition-colors"
 					onClick={() => {
-						void navigate('/');
+						void navigate(-1);
 					}}
 				>
 					<FiArrowLeft size={20} /> Back to Home
