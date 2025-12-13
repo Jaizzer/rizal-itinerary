@@ -420,10 +420,6 @@ import hongkongPerson2 from './assets/hongkong/person-2.jpg'; // Brother Paciano
 import hongkongPerson3 from './assets/hongkong/person-3.jpg'; // Father/Mother
 import hongkongPerson5 from './assets/hongkong/person-5.jpg'; // Jose Ma. Basa (for the clinic)
 
-
-
-
-
 // --- JAPAN IMPORTS (NEW) ---
 // MAIN IMAGES
 import japanMain1 from './assets/japan/main-1.jpg';
@@ -465,6 +461,40 @@ import japanPerson2 from './assets/japan/person-2.jpg'; // Japanese Musicians
 // WOMEN
 import japanWoman1 from './assets/japan/woman-1.jpg'; // Seiko Usui (O-Sei-San)
 // WOMEN
+
+// --- UNITED STATES IMPORTS (NEW) ---
+// MAIN IMAGES
+import usaMain1 from './assets/usa/main-1.jpg'; // Transcontinental train
+import usaMain2 from './assets/usa/main-2.jpg'; // New York/San Francisco skyline
+
+// TRANSPORTATION
+import usaTransport1 from './assets/usa/transport-1.jpg'; // Steamer Belgic
+import usaTransport2 from './assets/usa/transport-2.jpg'; // Transcontinental train
+import usaTransport3 from './assets/usa/transport-3.jpg';
+
+// LODGING / HOTELS
+import usaLodging1 from './assets/usa/lodging-1.jpg'; // Palace Hotel (SF)
+import usaLodging2 from './assets/usa/lodging-2.jpg'; // Boarding house
+import usaLodging3 from './assets/usa/lodging-3.jpg'; // Hotel in NY
+
+// ATTRACTIONS
+import usaAttraction1 from './assets/usa/attraction-1.jpg'; // Golden Gate Bridge (modern landmark)
+import usaAttraction2 from './assets/usa/attraction-2.jpg'; // Palace Hotel
+import usaAttraction3 from './assets/usa/attraction-3.jpg'; // Statue of Liberty
+import usaAttraction4 from './assets/usa/attraction-4.jpg';
+import usaAttraction5 from './assets/usa/attraction-5.jpg';
+
+// FOOD
+import usaFood1 from './assets/usa/food-1.jpg'; // San Francisco Sourdough
+import usaFood2 from './assets/usa/food-2.jpg'; // Chicago Deep Dish
+import usaFood3 from './assets/usa/food-3.jpg'; // Steaks
+import usaFood4 from './assets/usa/food-4.jpg';
+import usaFood5 from './assets/usa/food-5.jpg';
+
+// WORKS
+import usaWork1 from './assets/usa/work-1.jpg'; // Diary entries
+import usaWork2 from './assets/usa/work-2.jpg'; // Observing discrimination
+import usaWork3 from './assets/usa/work-3.jpg'; // Writing letters
 
 export interface MediaItem {
 	title: string;
@@ -1340,17 +1370,71 @@ const tourDetails: TourDetail[] = [
 				name: 'Juan Perez Caballero',
 				role: 'Secretary of Spanish Legation and Friend',
 			},
-            {
+			{
 				image: japanPerson2,
 				name: 'Suehiro Tetcho',
 				role: 'Journalis/Novelist',
 			},
-			
-            {
+
+			{
 				image: japanWoman1,
 				name: 'Seiko Usui (O-Sei-San)',
 				role: 'Love Interlude in Japan',
 			},
+		],
+	},
+	{
+		id: 'usa',
+		name: 'United States of America',
+		duration: '3 weeks (Apr 28 - May 16, 1888)',
+		price: '₱9,000',
+		location: 'San Francisco to New York (Transcontinental)',
+
+		main: [usaMain1, usaMain2],
+
+		description:
+			'Rizal traversed the United States via transcontinental train, traveling from San Francisco to New York. His visit was brief but gave him a unique perspective on the rising world power. While impressed by the country’s material progress and natural beauty, he was deeply disturbed by the blatant racial prejudice against the Chinese, which he considered a grave flaw in American civilization. He noted, "America is the land par excellence of freedom but only for the white."',
+
+		attractions: [
+			// Modern Contextualized Attractions (Representative landmarks)
+			{ title: 'Golden Gate Bridge (San Francisco)', image: usaAttraction1 },
+			{ title: 'Statue of Liberty (New York)', image: usaAttraction2 },
+			{ title: 'Grand Canyon / Utah Desert (Scenic Route)', image: usaAttraction3 },
+			{ title: 'Mount Rushmore', image: usaAttraction4 },
+			{ title: 'Washington, D.C.', image: usaAttraction5 },
+		],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: 'Palace Hotel (San Francisco)', image: usaLodging1 },
+			{ title: 'Palace Hotel (San Francisco)', image: usaLodging2 },
+			
+		],
+
+		food: [
+			// Modern Contextualized Foods (Regional Specialties)
+			{ title: 'San Francisco Sourdough Bread', image: usaFood1 },
+			{ title: 'Chicago Deep Dish Pizza', image: usaFood2 },
+			{ title: 'American Steak and BBQ', image: usaFood3 },
+			{ title: 'New England Clam Chowder', image: usaFood4 },
+			{ title: 'Hamburgers and American Diner Food', image: usaFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Steamer Belgic (Arrival)', image: usaTransport1 },
+			{ title: 'Transcontinental Train (San Francisco to New York)', image: usaTransport2 },
+			{ title: 'Horse-drawn Carriages/Cabs (City Travel)', image: usaTransport3 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Observation of US industrial and material progress', image: usaWork2 },
+			{
+				title: 'Critique of racial discrimination against Chinese immigrants',
+				image: usaWork1,
+			},
+			{ title: 'Studied American governance and society', image: usaWork3 },
 		],
 	},
 ];
