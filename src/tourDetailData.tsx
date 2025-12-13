@@ -202,15 +202,56 @@ import heidelbergWork1 from './assets/heidelberg/work-1.jpg';
 import heidelbergWork2 from './assets/heidelberg/work-2.jpg';
 import heidelbergWork3 from './assets/heidelberg/work-3.jpg';
 import heidelbergWork4 from './assets/heidelberg/work-4.jpg';
-import heidelbergWork5 from './assets/heidelberg/work-5.jpg';
 
 // PEOPLE
 import heidelbergPerson1 from './assets/heidelberg/person-1.jpg'; // Dr. Otto Becker
 import heidelbergPerson2 from './assets/heidelberg/person-2.jpg'; // Pastor Karl Ullmer
 import heidelbergPerson3 from './assets/heidelberg/person-3.jpg'; // Professor Wilheim Kuehne
-import heidelbergPerson4 from './assets/heidelberg/person-4.jpg'; // Ullmer Family (collectively)
 import heidelbergPerson5 from './assets/heidelberg/person-5.jpg'; // Ferdinand Blumentritt (Correspondence)
 import heidelbergMonument from './assets/heidelberg/monument-1.jpg'; // Ferdinand Blumentritt (Correspondence)
+
+// --- BERLIN IMPORTS (NEW) ---
+// MAIN IMAGES
+import berlinMain1 from './assets/berlin/main-1.jpg';
+import berlinMain2 from './assets/berlin/main-2.jpg';
+
+// TRANSPORTATION
+import berlinTransport1 from './assets/berlin/transport-1.jpg';
+import berlinTransport2 from './assets/berlin/transport-2.jpg';
+import berlinTransport5 from './assets/berlin/transport-5.jpg';
+
+// LODGING / HOTELS
+import berlinLodging1 from './assets/berlin/lodging-1.jpg'; // Jägerstrasse 71
+import berlinLodging2 from './assets/berlin/lodging-2.jpg'; // Dresden
+import berlinLodging3 from './assets/berlin/lodging-3.jpg'; // Boarding House
+
+// ATTRACTIONS
+import berlinAttraction1 from './assets/berlin/attraction-1.jpg'; // Brandenburg Gate
+import berlinAttraction2 from './assets/berlin/attraction-2.jpg'; // Museum Island
+import berlinAttraction3 from './assets/berlin/attraction-3.jpg'; // Reichstag
+import berlinAttraction4 from './assets/berlin/attraction-4.jpg';
+import berlinAttraction5 from './assets/berlin/attraction-5.jpg';
+
+// FOOD
+import berlinFood1 from './assets/berlin/food-1.jpg'; // Currywurst
+import berlinFood2 from './assets/berlin/food-2.jpg'; // Döner
+import berlinFood3 from './assets/berlin/food-3.jpg'; // Eisbein
+import berlinFood4 from './assets/berlin/food-4.jpg';
+import berlinFood5 from './assets/berlin/food-5.jpg';
+
+// WORKS
+import berlinWork1 from './assets/berlin/work-1.jpg'; // Noli publication
+import berlinWork2 from './assets/berlin/work-2.jpg'; // Eye Clinic
+import berlinWork3 from './assets/berlin/work-3.jpg'; // Writing letters
+import berlinWork4 from './assets/berlin/work-4.png';
+import berlinWork5 from './assets/berlin/work-5.jpg';
+
+// PEOPLE
+import berlinPerson1 from './assets/berlin/person-1.jpg'; // Dr. R. Virchow
+import berlinPerson2 from './assets/berlin/person-2.jpg'; // Dr. Schulzer
+import berlinPerson3 from './assets/berlin/person-3.jpg'; // Dr. Karl Ernst
+import berlinPerson4 from './assets/berlin/person-4.jpg'; // Maximo Viola
+import berlinPerson5 from './assets/berlin/person-5.jpg'; // Dr. Hans Virchow
 
 export interface MediaItem {
 	title: string;
@@ -607,6 +648,87 @@ const tourDetails: TourDetail[] = [
 				image: heidelbergPerson5,
 				name: 'Ferdinand Blumentritt',
 				role: 'Began correspondence (Austrian ethnologist)',
+			},
+		],
+		womenWithImages: [],
+	},
+	{
+		id: 'berlin',
+		name: 'Berlin, Germany',
+		duration: '7 months (Nov 1886 - May 1887)',
+		price: '₱6,500',
+		location: 'Berlin, Germany',
+
+		main: [berlinMain1, berlinMain2],
+
+		description:
+			'Rizal traveled to Berlin, the capital of Imperial Germany, primarily to advance his ophthalmology studies and to have his novel, Noli Me Tángere, published. He worked under several prominent German scientists and historians, including Dr. Schulzer and Dr. Karl Ernst Schweigger. Despite facing severe financial distress and near starvation, his time in Berlin culminated in the long-awaited printing of his novel in March 1887, marking the true beginning of his revolutionary role.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Brandenburg Gate (Brandenburger Tor)', image: berlinAttraction1 },
+			{ title: 'Museum Island (Museumsinsel)', image: berlinAttraction2 },
+			{ title: 'Reichstag Building', image: berlinAttraction3 },
+			{ title: 'Berlin Cathedral (Berliner Dom)', image: berlinAttraction5 },
+		],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: 'Jägerstrasse No. 71 (Boarding House)', image: berlinLodging1 },
+			{ title: 'Jägerstrasse No. 71 (Boarding House)', image: berlinLodging2 },
+		],
+
+		food: [
+			// Modern Contextualized Foods
+			{ title: 'Currywurst', image: berlinFood1 },
+			{ title: 'Berliner Döner Kebab', image: berlinFood2 },
+			{ title: 'Bratwurst and Sauerkraut', image: berlinFood3 },
+			{ title: 'Eisbein (Pork Hocks)', image: berlinFood4 },
+			{ title: 'Apfelstrudel', image: berlinFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Train travel (To and from Dresden)', image: berlinTransport1 },
+			{ title: 'Horse-drawn Streetcar (Tram)', image: berlinTransport2 },
+			{ title: 'Local Stagecoach (Inter-city travel)', image: berlinTransport5 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Publication of Noli Me Tángere (March 1887)', image: berlinWork1 },
+			{ title: "Worked at Dr. Schulzer's Eye Clinic", image: berlinWork2 },
+			{ title: 'Attended lectures at the University of Berlin', image: berlinWork3 },
+			{ title: 'Joined the Anthropological Society', image: berlinWork4 },
+			{ title: 'Wrote the poem "Tagalische Verskunst"', image: berlinWork5 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: berlinPerson1,
+				name: 'Dr. Rudolf Virchow',
+				role: 'Anthropologist & Ethnologist',
+			},
+			{
+				image: berlinPerson2,
+				name: 'Dr. Schulzer',
+				role: 'German Ophthalmologist',
+			},
+			{
+				image: berlinPerson3,
+				name: 'Dr. Karl Ernst Schweigger',
+				role: 'Professor of Ophthalmology',
+			},
+			{
+				image: berlinPerson4,
+				name: 'Maximo Viola',
+				role: 'Friend and Noli Financier',
+			},
+			{
+				image: berlinPerson5,
+				name: 'Dr. Hans Virchow',
+				role: 'Anatomist & Ethnologist',
 			},
 		],
 		womenWithImages: [],
