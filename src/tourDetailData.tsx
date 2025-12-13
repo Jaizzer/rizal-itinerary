@@ -73,7 +73,7 @@ const tourDetails: TourDetail[] = [
 		main: [colomboMain1, colomboMain2],
 
 		description:
-			'A historic stop on the first voyage to Europe by the national hero, Jose Rizal. He visited Colombo in May 1882, describing the capital of Ceylon as "more beautiful, smart and elegant than Singapore." During his brief stay, he practiced French with fellow passengers, observed local Sinhalese Buddhist culture, and likely lodged at the iconic Grand Oriental Hotel.',
+			'Colombo was a critical early stop in May 1882 during the national hero Jose Rizal’s first voyage to Europe. His presence here was integral to his secret mission to further his medical studies and prepare for the Philippine reform movement. He used the stopover on the steamship Djemnah to refine his language skills and observe diverse colonial cultures before sailing toward the Suez Canal.',
 		attractions: [
 			{ title: 'Colombo Town', image: colomboAttraction1 },
 			{ title: 'Harbor Viewpoint', image: colomboAttraction2 },
