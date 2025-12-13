@@ -95,11 +95,9 @@ import madridMain2 from './assets/madrid/main-2.jpg';
 
 // TRANSPORTATION
 import madridTransport1 from './assets/madrid/transport-1.jpg';
-import madridTransport2 from './assets/madrid/transport-2.jpg';
 
 // LODGING / HOTELS
 import madridLodging1 from './assets/madrid/lodging-1.jpg';
-import madridLodging2 from './assets/madrid/lodging-2.jpg';
 import madridLodging3 from './assets/madrid/lodging-3.jpg';
 
 // ATTRACTIONS
@@ -159,7 +157,6 @@ import parisFood5 from './assets/paris/food-5.jpg';
 // WORKS
 import parisWork1 from './assets/paris/work-1.jpg';
 import parisWork2 from './assets/paris/work-2.jpg';
-import parisWork3 from './assets/paris/work-3.jpg';
 import parisWork4 from './assets/paris/work-4.jpg';
 import parisWork5 from './assets/paris/work-5.jpg';
 
@@ -170,6 +167,50 @@ import parisPerson3 from './assets/paris/person-3.jpg';
 import parisPerson4 from './assets/paris/person-4.jpg';
 import parisPerson5 from './assets/paris/person-5.jpg';
 // --- END OF PARIS IMPORTS ---
+
+// --- HEIDELBERG IMPORTS (NEW) ---
+// MAIN IMAGES
+import heidelbergMain1 from './assets/heidelberg/main-1.jpg';
+import heidelbergMain2 from './assets/heidelberg/main-2.jpg';
+
+// TRANSPORTATION
+import heidelbergTransport1 from './assets/heidelberg/transport-1.jpg';
+import heidelbergTransport2 from './assets/heidelberg/transport-2.jpg';
+import heidelbergTransport3 from './assets/heidelberg/transport-3.jpg';
+
+// LODGING / HOTELS
+import heidelbergLodging1 from './assets/heidelberg/lodging-1.jpg'; // Ludwigsplatz 12
+import heidelbergLodging2 from './assets/heidelberg/lodging-2.jpg'; // Pastor Ullmer's Vicarage, Wilhelmsfeld
+import heidelbergLodging3 from './assets/heidelberg/lodging-3.jpg'; // Karlstrasse 16
+
+// ATTRACTIONS
+import heidelbergAttraction1 from './assets/heidelberg/attraction-1.jpg';
+import heidelbergAttraction2 from './assets/heidelberg/attraction-2.jpg';
+import heidelbergAttraction3 from './assets/heidelberg/attraction-3.jpg';
+import heidelbergAttraction4 from './assets/heidelberg/attraction-4.jpg';
+import heidelbergAttraction5 from './assets/heidelberg/attraction-5.jpg';
+
+// FOOD
+import heidelbergFood1 from './assets/heidelberg/food-1.jpg';
+import heidelbergFood2 from './assets/heidelberg/food-2.jpg';
+import heidelbergFood3 from './assets/heidelberg/food-3.jpg';
+import heidelbergFood4 from './assets/heidelberg/food-4.jpg';
+import heidelbergFood5 from './assets/heidelberg/food-5.jpg';
+
+// WORKS
+import heidelbergWork1 from './assets/heidelberg/work-1.jpg';
+import heidelbergWork2 from './assets/heidelberg/work-2.jpg';
+import heidelbergWork3 from './assets/heidelberg/work-3.jpg';
+import heidelbergWork4 from './assets/heidelberg/work-4.jpg';
+import heidelbergWork5 from './assets/heidelberg/work-5.jpg';
+
+// PEOPLE
+import heidelbergPerson1 from './assets/heidelberg/person-1.jpg'; // Dr. Otto Becker
+import heidelbergPerson2 from './assets/heidelberg/person-2.jpg'; // Pastor Karl Ullmer
+import heidelbergPerson3 from './assets/heidelberg/person-3.jpg'; // Professor Wilheim Kuehne
+import heidelbergPerson4 from './assets/heidelberg/person-4.jpg'; // Ullmer Family (collectively)
+import heidelbergPerson5 from './assets/heidelberg/person-5.jpg'; // Ferdinand Blumentritt (Correspondence)
+import heidelbergMonument from './assets/heidelberg/monument-1.jpg'; // Ferdinand Blumentritt (Correspondence)
 
 export interface MediaItem {
 	title: string;
@@ -483,6 +524,89 @@ const tourDetails: TourDetail[] = [
 				image: parisPerson5,
 				name: 'Valentine Ventura',
 				role: 'Patron and Friend',
+			},
+		],
+		womenWithImages: [],
+	},
+
+	{
+		id: 'heidelberg',
+		name: 'Heidelberg, Germany',
+		duration: '6 months (Feb - Aug 1886)',
+		price: '₱5,500',
+		location: 'Heidelberg & Wilhelmsfeld, Germany',
+
+		main: [heidelbergMain1, heidelbergMain2],
+
+		description:
+			'Rizal arrived in the "City of Flowers" in February 1886 to specialize in ophthalmology under the renowned Dr. Otto Becker. This short but profound period was dedicated to rigorous study and the mastery of German intellectual discipline. It was also here, while staying with Pastor Karl Ullmer in the nearby village of Wilhelmsfeld, that Rizal finished writing the final chapters of his revolutionary novel, Noli Me Tángere, inspired by the scenery and the German family’s warmth.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Heidelberg Castle (Schloss Heidelberg)', image: heidelbergAttraction1 },
+			{ title: 'Karl Theodor Bridge (Old Bridge)', image: heidelbergAttraction2 },
+			{ title: 'Philosopher’s Walk (Philosophenweg)', image: heidelbergAttraction3 },
+			{
+				title: 'Heiliggeistkirche (Church of the Holy Spirit)',
+				image: heidelbergAttraction4,
+			},
+			{ title: 'Heidelberg Altstadt (Old Town)', image: heidelbergAttraction5 },
+		],
+
+		monuments: [{ title: 'Wilhelmsfeld Shrine', image: heidelbergMonument }],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: 'Wilhelmsfeld, Germany', image: heidelbergLodging1 },
+			{ title: 'Wilhelmsfeld, Germany', image: heidelbergLodging2 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (Traditional German/Bavarian)
+			{ title: 'Schweinshaxe (Pork Knuckle)', image: heidelbergFood1 },
+			{ title: 'Schupfnudeln (German Potato Noodles)', image: heidelbergFood2 },
+			{ title: 'Brezen (Pretzels) with Obatzda', image: heidelbergFood3 },
+			{ title: 'Schnitzel with Kartoffelsalat (Potato Salad)', image: heidelbergFood4 },
+			{ title: 'Glühwein (Mulled Wine, Winter Season)', image: heidelbergFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Train from Paris to Heidelberg', image: heidelbergTransport1 },
+			{ title: 'Carriage/Funicular (To Heidelberg Castle)', image: heidelbergTransport3 },
+			{ title: 'Local Stagecoach (Inter-city travel)', image: heidelbergTransport2 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Ophthalmology Specialization (Under Dr. Becker)', image: heidelbergWork1 },
+			{ title: 'Writing the poem "A las Flores de Heidelberg"', image: heidelbergWork2 },
+			{ title: 'Finished writing Noli Me Tángere', image: heidelbergWork3 },
+			{ title: "Attended Prof. Kühne's physiology lectures", image: heidelbergWork4 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: heidelbergPerson1,
+				name: 'Dr. Otto Becker',
+				role: 'Renowned Professor of Ophthalmology',
+			},
+			{
+				image: heidelbergPerson2,
+				name: 'Pastor Karl Ullmer',
+				role: 'Host and Close Friend in Wilhelmsfeld',
+			},
+			{
+				image: heidelbergPerson3,
+				name: 'Prof. Wilheim Kühne',
+				role: 'German Physiologist (Lecture Attendance)',
+			},
+
+			{
+				image: heidelbergPerson5,
+				name: 'Ferdinand Blumentritt',
+				role: 'Began correspondence (Austrian ethnologist)',
 			},
 		],
 		womenWithImages: [],
