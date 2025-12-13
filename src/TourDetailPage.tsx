@@ -11,14 +11,14 @@ export default function TourDetailPage() {
 
 	return (
 		<>
-            <ScrollToTop/>
+			<ScrollToTop />
 			<Page>
 				{/* Back button */}
 				<div className="mt-6 px-10">
 					<button
 						className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-accent transition-colors"
 						onClick={() => {
-							void navigate('/');
+							void navigate(-1);
 						}}
 					>
 						<FiArrowLeft size={20} /> Back
