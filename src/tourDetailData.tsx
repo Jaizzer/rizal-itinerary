@@ -352,6 +352,40 @@ import londonPerson2 from './assets/london/person-2.jpg'; // Dr. Regidor
 
 // WOMEN
 
+// --- BRUSSELS IMPORTS (NEW) ---
+// MAIN IMAGES
+import brusselsMain1 from './assets/brussels/main-1.jpg';
+import brusselsMain2 from './assets/brussels/main-2.jpg';
+
+// TRANSPORTATION
+
+// LODGING / HOTELS
+import brusselsLodging1 from './assets/brussels/lodging-1.jpg'; // 38 Rue Philippe Champagne
+
+// ATTRACTIONS
+import brusselsAttraction1 from './assets/brussels/attraction-1.jpg'; // Grand Place
+import brusselsAttraction2 from './assets/brussels/attraction-2.jpg'; // Atomium (Modern, major attraction)
+import brusselsAttraction3 from './assets/brussels/attraction-3.jpg'; // Museums
+import brusselsAttraction4 from './assets/brussels/attraction-4.jpg'; // Parks/Gymnasium area
+
+// FOOD
+import brusselsFood1 from './assets/brussels/food-1.jpg'; // Waffles
+import brusselsFood2 from './assets/brussels/food-2.jpg'; // Frites
+import brusselsFood3 from './assets/brussels/food-3.jpg'; // Chocolate
+import brusselsFood4 from './assets/brussels/food-4.jpg';
+import brusselsFood5 from './assets/brussels/food-5.jpg';
+
+// WORKS
+import brusselsWork1 from './assets/brussels/work-1.jpg'; // El Fili writing
+import brusselsWork2 from './assets/brussels/work-2.jpg'; // La Solidaridad articles
+
+// PEOPLE
+import brusselsPerson1 from './assets/brussels/person-1.jpg'; // Jose Albert
+import brusselsPerson2 from './assets/brussels/person-2.jpg'; // Jose Alejandro
+import brusselsPerson5 from './assets/brussels/person-5.jpg'; // Gambling Filipinos (as a group)
+
+// WOMEN
+
 export interface MediaItem {
 	title: string;
 	image: string;
@@ -998,8 +1032,6 @@ const tourDetails: TourDetail[] = [
 			{ title: 'Steamship City of Rome (Trans-Atlantic)', image: londonTransport1 },
 			{ title: 'London Underground (Early System)', image: londonTransport2 },
 			{ title: 'Hansoms (Horse-drawn Cabs)', image: londonTransport3 },
-			{ title: 'Train to Paris/Spain', image: londonTransport1 },
-			{ title: 'Walking (Museum Commute)', image: londonTransport2 },
 		],
 
 		works: [
@@ -1025,6 +1057,75 @@ const tourDetails: TourDetail[] = [
 				image: londonPerson2,
 				name: 'Gertrude Beckett',
 				role: 'Love Interlude in London',
+			},
+		],
+	},
+
+	{
+		id: 'brussels',
+		name: 'Brussels, Belgium',
+		duration: '7 months (Jan - July 1890)',
+		price: '₱5,000',
+		location: 'Brussels, Belgium',
+
+		main: [brusselsMain1, brusselsMain2],
+
+		description:
+			'Rizal moved to Brussels in early 1890, seeking a cheaper and quieter environment to concentrate on writing his second novel, El Filibusterismo. He lived in a boarding house run by the Jacoby sisters. This period was marked by intense literary work, contributing to La Solidaridad, advocating for the Filipinization of Tagalog orthography, and receiving troubling news about the escalating Calamba agrarian crisis, which ultimately fueled his desire to return home.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Grand Place (Central Square)', image: brusselsAttraction1 },
+			{ title: 'The Atomium', image: brusselsAttraction2 },
+			{ title: 'Royal Museums of Fine Arts', image: brusselsAttraction3 },
+			{ title: 'Parc de Bruxelles', image: brusselsAttraction4 },
+			{ title: 'Summer Festival Sites', image: brusselsAttraction1 },
+		],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: '38 Rue Philippe Champagne (Jacoby Boarding House)', image: brusselsLodging1 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (Belgian Specialties)
+			{ title: 'Belgian Waffles (Gaufres)', image: brusselsFood1 },
+			{ title: 'Belgian Frites (French Fries)', image: brusselsFood2 },
+			{ title: 'Belgian Chocolate', image: brusselsFood3 },
+			{ title: 'Moules-Frites (Mussels and Fries)', image: brusselsFood4 },
+			{ title: 'Stoemp (Mashed Potatoes and Vegetables)', image: brusselsFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Train from Paris', image: berlinTransport1 },
+			{ title: 'Local Tram/Streetcar', image: berlinTransport2 },
+			{ title: 'Local Stagecoach (Inter-city travel)', image: berlinTransport5 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Writing El Filibusterismo', image: brusselsWork1 },
+			{ title: 'Writing articles for La Solidaridad', image: brusselsWork2 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: brusselsPerson1,
+				name: 'Jose Alberto',
+				role: 'Fellow Filipino who moved with Rizal',
+			},
+			{
+				image: brusselsPerson2,
+				name: 'Jose Alejandro',
+				role: 'Fellow Filipino (Joined Rizal later)',
+			},
+
+			{
+				image: brusselsPerson5,
+				name: 'Suzanne Jacoby',
+				role: 'Love Interest',
 			},
 		],
 	},
