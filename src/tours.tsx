@@ -15,7 +15,7 @@ import homePageImage19 from './assets/rizal_usa.jpg';
 
 const tours = [
 	{
-		duration: '2 days',
+		duration: '3.5 - 4 hours', // Flight from Manila
 		id: 'singapore',
 		image: homePageImage6,
 		location: 'Singapore',
@@ -24,7 +24,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '1 day',
+		duration: '4 hours', // Non-stop Flight from Singapore
 		id: 'colombo',
 		image: homePageImage7,
 		location: 'Colombo, Ceylon',
@@ -33,7 +33,7 @@ const tours = [
 		rating: 4.7,
 	},
 	{
-		duration: '3 days',
+		duration: '13 - 14 hours', // Total Flight Time from Colombo (with one stop)
 		id: 'barcelona',
 		image: homePageImage8,
 		location: 'Barcelona, Spain',
@@ -42,7 +42,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '6 months',
+		duration: '2.5 - 3 hours', // High-speed Train from Barcelona
 		id: 'madrid',
 		image: homePageImage9,
 		location: 'Madrid, Spain',
@@ -51,7 +51,7 @@ const tours = [
 		rating: 4.9,
 	},
 	{
-		duration: '1 week',
+		duration: '10 - 11 hours', // Train from Madrid (with one change)
 		id: 'paris',
 		image: homePageImage10,
 		location: 'Paris, France',
@@ -60,7 +60,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '3 months',
+		duration: '3.5 - 4 hours', // High-speed Train from Paris (with one change)
 		id: 'heidelberg',
 		image: homePageImage11,
 		location: 'Heidelberg, Germany',
@@ -69,7 +69,7 @@ const tours = [
 		rating: 4.7,
 	},
 	{
-		duration: '6 months',
+		duration: '4.5 - 5 hours', // High-speed Train from Heidelberg
 		id: 'berlin',
 		image: homePageImage12,
 		location: 'Berlin, Germany',
@@ -78,7 +78,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '2 months',
+		duration: '1 hour 15 minutes', // High-speed Train from Berlin
 		id: 'leipzig',
 		image: homePageImage13,
 		location: 'Leipzig, Germany',
@@ -87,7 +87,7 @@ const tours = [
 		rating: 4.7,
 	},
 	{
-		duration: '2 days',
+		duration: '1 hour 10 minutes', // High-speed Train from Leipzig
 		id: 'dresden',
 		image: homePageImage14,
 		location: 'Dresden, Germany',
@@ -96,7 +96,7 @@ const tours = [
 		rating: 4.7,
 	},
 	{
-		duration: '10 months',
+		duration: '4.5 - 5.5 hours', // Total Travel by Air from Dresden (with airport time)
 		id: 'london',
 		image: homePageImage15,
 		location: 'London, United Kingdom',
@@ -105,7 +105,7 @@ const tours = [
 		rating: 4.9,
 	},
 	{
-		duration: '6 months',
+		duration: '2 hours 10 minutes', // Eurostar Train from London
 		id: 'brussels',
 		image: homePageImage16,
 		location: 'Brussels, Belgium',
@@ -114,7 +114,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '8 months',
+		duration: '11.5 hours', // Non-stop Flight from Brussels
 		id: 'hongkong',
 		image: homePageImage17,
 		location: 'Hong Kong',
@@ -123,7 +123,7 @@ const tours = [
 		rating: 4.8,
 	},
 	{
-		duration: '1.5 months',
+		duration: '4 - 4.5 hours', // Flight from Hong Kong to Tokyo
 		id: 'japan',
 		image: homePageImage18,
 		location: 'Japan',
@@ -132,7 +132,7 @@ const tours = [
 		rating: 4.9,
 	},
 	{
-		duration: '2 weeks',
+		duration: '12.5 - 13 hours', // Non-stop Flight from Tokyo to West Coast USA
 		id: 'usa',
 		image: homePageImage19,
 		location: 'USA',
