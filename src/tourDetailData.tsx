@@ -259,14 +259,8 @@ import leipzigMain1 from './assets/leipzig/main-1.jpg';
 import leipzigMain2 from './assets/leipzig/main-2.jpg';
 
 // TRANSPORTATION
-import leipzigTransport1 from './assets/leipzig/transport-1.jpg';
-import leipzigTransport2 from './assets/leipzig/transport-2.jpg';
-import leipzigTransport3 from './assets/leipzig/transport-3.jpg';
 
 // LODGING / HOTELS
-import leipzigLodging1 from './assets/leipzig/lodging-1.jpg';
-import leipzigLodging2 from './assets/leipzig/lodging-2.jpg';
-import leipzigLodging3 from './assets/leipzig/lodging-3.jpg';
 
 // ATTRACTIONS
 import leipzigAttraction1 from './assets/leipzig/attraction-1.jpg';
@@ -285,16 +279,52 @@ import leipzigFood5 from './assets/leipzig/food-5.jpg';
 // WORKS
 import leipzigWork1 from './assets/leipzig/work-1.jpg';
 import leipzigWork2 from './assets/leipzig/work-2.jpg';
-import leipzigWork3 from './assets/leipzig/work-3.jpg';
-import leipzigWork4 from './assets/leipzig/work-4.jpg';
-import leipzigWork5 from './assets/leipzig/work-5.jpg';
 
 // PEOPLE
 import leipzigPerson1 from './assets/leipzig/person-1.jpg'; // Prof. Friedrich Ratzel
 import leipzigPerson2 from './assets/leipzig/person-2.jpg'; // Dr. Hans Meyer
-import leipzigPerson3 from './assets/leipzig/person-3.jpg'; // Other students/acquaintances
-import leipzigPerson4 from './assets/leipzig/person-4.jpg'; // Publishing firm contacts
-import leipzigPerson5 from './assets/leipzig/person-5.jpg'; // University contacts
+
+// --- DRESDEN IMPORTS (NEW) ---
+// MAIN IMAGES
+import dresdenMain1 from './assets/dresden/main-1.jpg';
+import dresdenMain2 from './assets/dresden/main-2.jpg';
+
+// TRANSPORTATION
+import dresdenTransport1 from './assets/dresden/transport-1.jpg'; // Train to Teschen/Leitmeritz
+import dresdenTransport2 from './assets/dresden/transport-2.jpg'; // Local travel
+import dresdenTransport3 from './assets/dresden/transport-3.jpg';
+
+// LODGING / HOTELS
+import dresdenLodging1 from './assets/dresden/lodging-1.jpg'; // Simple hotel
+import dresdenLodging2 from './assets/dresden/lodging-2.jpg';
+
+// ATTRACTIONS
+import dresdenAttraction1 from './assets/dresden/attraction-1.jpg'; // Zwinger Palace
+import dresdenAttraction2 from './assets/dresden/attraction-2.jpg'; // Gemäldegalerie (Prometheus)
+import dresdenAttraction3 from './assets/dresden/attraction-3.jpg'; // Hofkirche (Mass)
+import dresdenAttraction4 from './assets/dresden/attraction-4.jpg'; // Floral Exposition
+import dresdenAttraction5 from './assets/dresden/attraction-5.jpg'; // Altstadt
+
+// FOOD
+import dresdenFood1 from './assets/dresden/food-1.jpg'; // Eierschecke
+import dresdenFood2 from './assets/dresden/food-2.jpg'; // Sauerbraten
+import dresdenFood3 from './assets/dresden/food-3.jpg'; // Christstollen
+import dresdenFood4 from './assets/dresden/food-4.jpg';
+import dresdenFood5 from './assets/dresden/food-5.jpg';
+
+// WORKS
+import dresdenWork1 from './assets/dresden/work-1.jpg'; // Meeting Dr. Meyer
+import dresdenWork2 from './assets/dresden/work-2.jpg'; // Studying plants
+import dresdenWork3 from './assets/dresden/work-3.jpg'; // Viewing Prometheus
+import dresdenWork4 from './assets/dresden/work-4.jpg'; // Wiring Blumentritt
+import dresdenWork5 from './assets/dresden/work-5.jpg';
+
+// PEOPLE
+import dresdenPerson1 from './assets/dresden/person-1.jpg'; // Maximo Viola
+import dresdenPerson2 from './assets/dresden/person-2.jpg'; // Dr. Adolph Meyer
+import dresdenPerson3 from './assets/dresden/person-3.jpg'; // Dr. Jagor
+import dresdenPerson4 from './assets/dresden/person-4.jpg'; // Museum contacts
+import dresdenPerson5 from './assets/dresden/person-5.jpg'; // Viola's friend (for companionship context)
 
 export interface MediaItem {
 	title: string;
@@ -830,6 +860,71 @@ const tourDetails: TourDetail[] = [
 				image: leipzigPerson2,
 				name: 'Dr. Hans Meyer',
 				role: 'German Anthropologist',
+			},
+		],
+		womenWithImages: [],
+	},
+
+	{
+		id: 'dresden',
+		name: 'Dresden, Germany',
+		duration: '2 days (Oct 29-31, 1886)',
+		price: '₱1,500',
+		location: 'Dresden, Saxony, Germany',
+
+		main: [dresdenMain1, dresdenMain2],
+
+		description:
+			'Rizal and Maximo Viola spent a brief, two-day cultural stop in Dresden before traveling to Leitmeritz. The visit was highly focused: they met with German anthropologist Dr. Adolph Meyer, toured the Floral Exposition (where they met Dr. Jagor), and visited the Museum of Art, where Rizal was deeply impressed by the painting “Prometheus Bound.” He also heard a Holy Mass that greatly moved him with its sublime music.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'Zwinger Palace (Museum Complex)', image: dresdenAttraction1 },
+			{ title: 'Gemäldegalerie Alte Meister (Art Museum)', image: dresdenAttraction2 },
+			{ title: 'Frauenkirche (Church)', image: dresdenAttraction3 },
+			{ title: 'Semperoper (Opera House)', image: dresdenAttraction4 },
+			{ title: 'Grosser Garten (Floral/Nature Study)', image: dresdenAttraction5 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (Traditional Dresden/Saxon)
+			{ title: 'Dresdner Eierschecke (Layer Cake)', image: dresdenFood1 },
+			{ title: 'Sauerbraten (Pot Roast)', image: dresdenFood2 },
+			{ title: 'Dresdner Christstollen (Holiday Bread)', image: dresdenFood3 },
+			{ title: 'Saxon Potato Soup', image: dresdenFood4 },
+			{ title: 'Pulsnitzer Pfefferkuchen (Gingerbread)', image: dresdenFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Train travel (To and from Dresden)', image: berlinTransport1 },
+			{ title: 'Horse-drawn Streetcar (Tram)', image: berlinTransport2 },
+			{ title: 'Local Stagecoach (Inter-city travel)', image: berlinTransport5 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Visited Dr. Adolph B. Meyer (Anthropologist)', image: dresdenWork1 },
+			{ title: 'Impressed by "Prometheus Bound" painting', image: dresdenWork3 },
+			{ title: 'Met Dr. Jagor, who advised wiring Blumentritt', image: dresdenWork5 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: dresdenPerson3,
+				name: 'Maximo Viola',
+				role: 'Travel Companion and Noli Financier',
+			},
+			{
+				image: dresdenPerson2,
+				name: 'Dr. Adolph B. Meyer',
+				role: 'Director, Anthropological Museum',
+			},
+			{
+				image: dresdenPerson1,
+				name: 'Dr. Fedor Jagor',
+				role: 'German Traveler and Scientist',
 			},
 		],
 		womenWithImages: [],
