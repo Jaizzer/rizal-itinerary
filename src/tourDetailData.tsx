@@ -181,7 +181,6 @@ import heidelbergTransport3 from './assets/heidelberg/transport-3.jpg';
 // LODGING / HOTELS
 import heidelbergLodging1 from './assets/heidelberg/lodging-1.jpg'; // Ludwigsplatz 12
 import heidelbergLodging2 from './assets/heidelberg/lodging-2.jpg'; // Pastor Ullmer's Vicarage, Wilhelmsfeld
-import heidelbergLodging3 from './assets/heidelberg/lodging-3.jpg'; // Karlstrasse 16
 
 // ATTRACTIONS
 import heidelbergAttraction1 from './assets/heidelberg/attraction-1.jpg';
@@ -223,13 +222,11 @@ import berlinTransport5 from './assets/berlin/transport-5.jpg';
 // LODGING / HOTELS
 import berlinLodging1 from './assets/berlin/lodging-1.jpg'; // Jägerstrasse 71
 import berlinLodging2 from './assets/berlin/lodging-2.jpg'; // Dresden
-import berlinLodging3 from './assets/berlin/lodging-3.jpg'; // Boarding House
 
 // ATTRACTIONS
 import berlinAttraction1 from './assets/berlin/attraction-1.jpg'; // Brandenburg Gate
 import berlinAttraction2 from './assets/berlin/attraction-2.jpg'; // Museum Island
 import berlinAttraction3 from './assets/berlin/attraction-3.jpg'; // Reichstag
-import berlinAttraction4 from './assets/berlin/attraction-4.jpg';
 import berlinAttraction5 from './assets/berlin/attraction-5.jpg';
 
 // FOOD
@@ -290,14 +287,6 @@ import dresdenMain1 from './assets/dresden/main-1.jpg';
 import dresdenMain2 from './assets/dresden/main-2.jpg';
 
 // TRANSPORTATION
-import dresdenTransport1 from './assets/dresden/transport-1.jpg'; // Train to Teschen/Leitmeritz
-import dresdenTransport2 from './assets/dresden/transport-2.jpg'; // Local travel
-import dresdenTransport3 from './assets/dresden/transport-3.jpg';
-
-// LODGING / HOTELS
-import dresdenLodging1 from './assets/dresden/lodging-1.jpg'; // Simple hotel
-import dresdenLodging2 from './assets/dresden/lodging-2.jpg';
-
 // ATTRACTIONS
 import dresdenAttraction1 from './assets/dresden/attraction-1.jpg'; // Zwinger Palace
 import dresdenAttraction2 from './assets/dresden/attraction-2.jpg'; // Gemäldegalerie (Prometheus)
@@ -314,17 +303,54 @@ import dresdenFood5 from './assets/dresden/food-5.jpg';
 
 // WORKS
 import dresdenWork1 from './assets/dresden/work-1.jpg'; // Meeting Dr. Meyer
-import dresdenWork2 from './assets/dresden/work-2.jpg'; // Studying plants
 import dresdenWork3 from './assets/dresden/work-3.jpg'; // Viewing Prometheus
-import dresdenWork4 from './assets/dresden/work-4.jpg'; // Wiring Blumentritt
 import dresdenWork5 from './assets/dresden/work-5.jpg';
 
 // PEOPLE
 import dresdenPerson1 from './assets/dresden/person-1.jpg'; // Maximo Viola
 import dresdenPerson2 from './assets/dresden/person-2.jpg'; // Dr. Adolph Meyer
 import dresdenPerson3 from './assets/dresden/person-3.jpg'; // Dr. Jagor
-import dresdenPerson4 from './assets/dresden/person-4.jpg'; // Museum contacts
-import dresdenPerson5 from './assets/dresden/person-5.jpg'; // Viola's friend (for companionship context)
+
+// --- LONDON IMPORTS (NEW) ---
+// MAIN IMAGES
+import londonMain1 from './assets/london/main-1.jpg';
+import londonMain2 from './assets/london/main-2.jpg';
+
+// TRANSPORTATION
+import londonTransport1 from './assets/london/transport-1.jpg'; // Ship City of Rome
+import londonTransport2 from './assets/london/transport-2.jpg'; // Underground/Cab
+import londonTransport3 from './assets/london/transport-3.jpg'; // Train
+
+// LODGING / HOTELS
+import londonLodging1 from './assets/london/lodging-1.jpg'; // Adelphi Hotel (Liverpool)
+import londonLodging2 from './assets/london/lodging-2.jpg'; // Beckett Home (Chalcot Crescent)
+import londonLodging3 from './assets/london/lodging-3.jpg'; // Dr. Regidor's Home
+
+// ATTRACTIONS
+import londonAttraction1 from './assets/london/attraction-1.jpg'; // British Museum
+import londonAttraction2 from './assets/london/attraction-2.jpg'; // Tower of London
+import londonAttraction3 from './assets/london/attraction-3.jpg'; // Hyde Park
+import londonAttraction4 from './assets/london/attraction-4.jpg'; // Westminster
+import londonAttraction5 from './assets/london/attraction-5.jpg'; // Piccadilly Circus
+
+// FOOD
+import londonFood1 from './assets/london/food-1.jpg'; // Fish and Chips
+import londonFood2 from './assets/london/food-2.jpg'; // Afternoon Tea
+import londonFood3 from './assets/london/food-3.jpg'; // Roast Beef
+import londonFood4 from './assets/london/food-4.jpg';
+import londonFood5 from './assets/london/food-5.jpg';
+
+// WORKS
+import londonWork1 from './assets/london/work-1.jpg'; // Morga's Sucesos
+import londonWork2 from './assets/london/work-2.jpg'; // Letter to Young Women
+import londonWork3 from './assets/london/work-3.jpg'; // La Solidaridad article
+import londonWork4 from './assets/london/work-4.jpg'; // La Vision del Fray Rodriguez
+
+// PEOPLE
+import londonPerson1 from './assets/london/person-1.jpg'; // Dr. Rost
+import londonPerson2 from './assets/london/person-2.jpg'; // Dr. Regidor
+
+// WOMEN
 
 export interface MediaItem {
 	title: string;
@@ -928,6 +954,79 @@ const tourDetails: TourDetail[] = [
 			},
 		],
 		womenWithImages: [],
+	},
+
+	{
+		id: 'london',
+		name: 'London, England',
+		duration: '10 months (May 1888 - March 1889)',
+		price: '₱7,500',
+		location: 'London, United Kingdom',
+
+		main: [londonMain1, londonMain2],
+
+		description:
+			'Rizal lived in London primarily to study and annotate Antonio de Morga’s rare Sucesos de las Islas Filipinas at the British Museum, preparing the groundwork for El Fili. He chose London for its academic resources and its relative safety from Spanish political persecution. This period was marked by historical research, close contacts with his Spanish and Filipino compatriots (where he met Del Pilar and Ponce), and a brief romance with Gertrude Beckett.',
+
+		attractions: [
+			// Modern Contextualized Attractions
+			{ title: 'The British Museum', image: londonAttraction1 },
+			{ title: 'Tower of London', image: londonAttraction2 },
+			{ title: 'Hyde Park', image: londonAttraction3 },
+			{ title: 'Westminster Abbey & Parliament', image: londonAttraction4 },
+			{ title: 'Trafalgar Square', image: londonAttraction5 },
+		],
+
+		hotels: [
+			// Rizal's Residences (Historical Context)
+			{ title: 'Beckett Family Home (Chalcot Crescent)', image: londonLodging1 },
+			{ title: 'Beckett Family Home (Chalcot Crescent)', image: londonLodging2 },
+			{ title: 'Adelphi Hotel (Liverpool Arrival)', image: londonLodging3 },
+		],
+
+		food: [
+			// Modern Contextualized Foods (British Classics)
+			{ title: 'Fish and Chips', image: londonFood1 },
+			{ title: 'Afternoon Tea and Scones', image: londonFood2 },
+			{ title: 'Sunday Roast (Beef or Chicken)', image: londonFood3 },
+			{ title: 'Pies and Mash', image: londonFood4 },
+			{ title: 'Full English Breakfast', image: londonFood5 },
+		],
+
+		transportation: [
+			// Rizal's Transportation (Historical Context)
+			{ title: 'Steamship City of Rome (Trans-Atlantic)', image: londonTransport1 },
+			{ title: 'London Underground (Early System)', image: londonTransport2 },
+			{ title: 'Hansoms (Horse-drawn Cabs)', image: londonTransport3 },
+			{ title: 'Train to Paris/Spain', image: londonTransport1 },
+			{ title: 'Walking (Museum Commute)', image: londonTransport2 },
+		],
+
+		works: [
+			// Rizal's Activities (Historical Context)
+			{ title: 'Studying & Annotating Morga’s Sucesos', image: londonWork1 },
+			{ title: 'Letter to the Young Women of Malolos', image: londonWork2 },
+			{
+				title: 'First Article in La Solidaridad ("Los Agricultores Filipinos")',
+				image: londonWork3,
+			},
+			{ title: 'La Visión del Fray Rodríguez', image: londonWork4 },
+		],
+
+		peopleWithImages: [
+			// Rizal's People (Historical Context)
+			{
+				image: londonPerson1,
+				name: 'Dr. Reinhold Rost',
+				role: 'Librarian and Malayan Linguist ("Pearl of a Man")',
+			},
+
+			{
+				image: londonPerson2,
+				name: 'Gertrude Beckett',
+				role: 'Love Interlude in London',
+			},
+		],
 	},
 ];
 
