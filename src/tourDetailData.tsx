@@ -10,24 +10,22 @@ import colomboTransport2 from './assets/colombo/transport-2.jpg';
 import colomboLodging1 from './assets/colombo/lodging-1.jpg';
 import colomboLodging2 from './assets/colombo/lodging-2.jpg';
 
-// MONUMENTS
-import colomboMonument1 from './assets/colombo/monument-1.jpg';
-import colomboMonument2 from './assets/colombo/monument-2.jpg';
-
 // ATTRACTIONS
 import colomboAttraction1 from './assets/colombo/attraction-1.jpg';
 import colomboAttraction2 from './assets/colombo/attraction-2.jpg';
+import colomboAttraction3 from './assets/colombo/attraction-3.jpg';
+import colomboAttraction4 from './assets/colombo/attraction-4.jpg';
+import colomboAttraction5 from './assets/colombo/attraction-5.jpg';
 
 // FOOD
 import colomboFood1 from './assets/colombo/food-1.jpg';
 import colomboFood2 from './assets/colombo/food-2.jpg';
+import colomboFood3 from './assets/colombo/food-3.jpg'; // New
+import colomboFood4 from './assets/colombo/food-4.jpg'; // New
+import colomboFood5 from './assets/colombo/food-5.jpg'; // New
 
 // WORKS
 import colomboWork1 from './assets/colombo/work-1.jpg';
-import colomboWork2 from './assets/colombo/work-2.jpg';
-
-// PEOPLE
-import colomboPerson1 from './assets/colombo/person-1.jpg';
 
 export interface MediaItem {
 	title: string;
@@ -48,16 +46,19 @@ export interface TourDetail {
 	location: string;
 	description: string;
 
-	main: string[]; // ⭐ MAIN IMAGES ARRAY
+	// MAIN IMAGE SLIDER (always required)
+	main: string[];
 
-	attractions: MediaItem[];
-	hotels: MediaItem[];
-	food: MediaItem[];
-	monuments: MediaItem[];
-	transportation: MediaItem[];
-	works: MediaItem[];
+	// OPTIONAL CONTENT SECTIONS
+	attractions?: MediaItem[];
+	hotels?: MediaItem[];
+	food?: MediaItem[];
+	monuments?: MediaItem[];
+	transportation?: MediaItem[];
+	works?: MediaItem[];
 
-	peopleWithImages: Person[];
+	// PEOPLE
+	peopleWithImages?: Person[];
 	womenWithImages?: Person[];
 }
 
@@ -72,39 +73,33 @@ const tourDetails: TourDetail[] = [
 		main: [colomboMain1, colomboMain2],
 
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat voluptatem esse omnis distinctio tempore aspernatur eos mollitia veritatis!',
-
+			'A historic stop on the first voyage to Europe by the national hero, Jose Rizal. He visited Colombo in May 1882, describing the capital of Ceylon as "more beautiful, smart and elegant than Singapore." During his brief stay, he practiced French with fellow passengers, observed local Sinhalese Buddhist culture, and likely lodged at the iconic Grand Oriental Hotel.',
 		attractions: [
-			{ title: 'Colombo Town, Sri Lanka', image: colomboAttraction1 },
+			{ title: 'Colombo Town', image: colomboAttraction1 },
 			{ title: 'Harbor Viewpoint', image: colomboAttraction2 },
+			{ title: 'Galle Face Green', image: colomboAttraction3 },
+			{ title: 'Gangaramaya Temple', image: colomboAttraction4 },
+			{ title: 'Independence Memorial Hall', image: colomboAttraction5 },
 		],
-
 		hotels: [
 			{ title: 'Grand Oriental Hotel', image: colomboLodging1 },
-			{ title: 'Local Inn Near Harbor', image: colomboLodging2 },
+			{ title: 'Grand Oriental Hotel', image: colomboLodging2 },
 		],
 
 		food: [
-			{ title: 'Local Ceylonese Meals', image: colomboFood1 },
-			{ title: 'Street Snacks', image: colomboFood2 },
-		],
-
-		monuments: [
-			{ title: 'City Landmarks & Harbor View', image: colomboMonument1 },
-			{ title: 'Old Colombo Lighthouse', image: colomboMonument2 },
+			{ title: 'Kottu Roti', image: colomboFood1 },
+			{ title: 'Fish Ambul Thiyal', image: colomboFood2 },
+			{ title: 'Hoppers (Appa)', image: colomboFood3 },
+			{ title: 'Lamprais', image: colomboFood4 },
+			{ title: 'Polos (Green Jackfruit Curry)', image: colomboFood5 },
 		],
 
 		transportation: [
 			{ title: 'French Ship Djemnah', image: colomboTransport1 },
-			{ title: 'Local Carriage & Walking Routes', image: colomboTransport2 },
+			{ title: 'French Ship Djemnah', image: colomboTransport2 },
 		],
 
-		works: [
-			{ title: 'City Sketches', image: colomboWork1 },
-			{ title: 'Travel Notes & Observations', image: colomboWork2 },
-		],
-
-		peopleWithImages: [{ image: colomboPerson1, name: 'Local Friends', role: 'Guides' }],
+		works: [{ title: 'Rizal practiced and improved his French.', image: colomboWork1 }],
 	},
 ];
 
