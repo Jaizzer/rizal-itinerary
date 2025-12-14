@@ -63,7 +63,7 @@ export default function HomePage(): JSX.Element {
 									<MdOutlineTravelExplore color="#5c57b2" size={25} />
 								</div>
 								<div>
-									<h3 className="text-lg font-semibold">Heading</h3>
+									<h3 className="text-lg font-semibold">Unexpected Fortune</h3>
 									<p className="text-sm">Rizal won a lottery in Dapitan.</p>
 								</div>
 							</li>
@@ -72,7 +72,7 @@ export default function HomePage(): JSX.Element {
 									<MdCardTravel color="#5c57b2" size={25} />
 								</div>
 								<div>
-									<h3 className="text-lg font-semibold">Heading</h3>
+									<h3 className="text-lg font-semibold">Then vs. Now</h3>
 									<p className="text-sm">
 										Rizal's one-month sea voyage now takes a single 14-hour
 										flight.
@@ -84,7 +84,7 @@ export default function HomePage(): JSX.Element {
 									<IoMap color="#5c57b2" size={25} />
 								</div>
 								<div>
-									<h3 className="text-lg font-semibold">Heading</h3>
+									<h3 className="text-lg font-semibold">Hidden Affiliations</h3>
 									<p className="text-sm">Rizal is a Master Mason.</p>
 								</div>
 							</li>
