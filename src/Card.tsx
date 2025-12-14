@@ -22,7 +22,7 @@ export default function TourCard({
 }: TourCardProps): JSX.Element {
 	return (
 		<div className="rounded-xl overflow-hidden shadow-md bg-white max-w-full grid">
-			<img className="h-48 w-full object-cover" src={image} />
+			<img className="h-48 w-full object-cover" loading='lazy' src={image} />
 
 			<div className="p-4 grid gap-3">
 				<div className="flex items-center gap-2">

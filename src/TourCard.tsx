@@ -23,7 +23,7 @@ export default function TourCard({
 }: TourCardProps) {
 	return (
 		<Card className="w-full overflow-hidden h-125 rounded-2xl shadow-md border-none transform transition-all duration-300 hover:shadow-xl hover:scale-105">
-			<img alt={name} className="w-full h-70 object-cover" src={image} />
+			<img loading='lazy' alt={name} className="w-full h-70 object-cover" src={image} />
 			<div className="p-5 grid gap-3">
 				<div className="flex items-center gap-1 text-sm font-semibold">
 					<Star className="fill-yellow-400 text-yellow-400" size={18} />

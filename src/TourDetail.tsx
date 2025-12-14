@@ -116,6 +116,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 	return (
 		<div className="relative group">
 			<img
+				loading="lazy"
 				src={images[index]}
 				alt={title}
 				className="w-full h-64 md:h-96 object-cover rounded-2xl"
@@ -172,7 +173,12 @@ function SectionCard({
 	return (
 		<div className="bg-white rounded-2xl shadow-md overflow-hidden">
 			<div className="relative group">
-				<img src={current.image} alt={current.title} className="w-full h-80 object-cover" />
+				<img
+					loading="lazy"
+					src={current.image}
+					alt={current.title}
+					className="w-full h-80 object-cover"
+				/>
 
 				{items.length > 1 && (
 					<>

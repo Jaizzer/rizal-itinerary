@@ -136,7 +136,7 @@ import parisTransport3 from './assets/paris/transport-3.jpg';
 import parisTransport4 from './assets/paris/transport-4.jpg';
 
 // LODGING / HOTELS
-import parisLodging1 from './assets/paris/lodging-1.jpg';
+import parisLodging4 from './assets/paris/lodging-4.jpg';
 import parisLodging2 from './assets/paris/lodging-2.jpg';
 import parisLodging3 from './assets/paris/lodging-3.jpg'; // Using this for the 3rd lodging type
 
@@ -753,9 +753,10 @@ const tourDetails: TourDetail[] = [
 
 		hotels: [
 			// Using the new clean names
-			{ title: 'Boarding House (1889-1890 Research Period)', image: parisLodging1 },
+			{ title: 'Apartment on Rue de Maubeuge', image: parisLodging2 },
 			{ title: 'Apartment on Rue de Maubeuge', image: parisLodging2 },
 			{ title: 'Hotel de Paris (First Visit, 1883)', image: parisLodging3 }, // Using 3 for the third type
+			{ title: 'Hotel de Paris (First Visit, 1883)', image: parisLodging4}, // Using 3 for the third type
 		],
 
 		food: [

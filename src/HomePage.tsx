@@ -23,6 +23,7 @@ export default function HomePage(): JSX.Element {
 			<main className="grid gap-15 md:gap-20 mb-15">
 				<section className="max-w-[1304px] grid gap-3 md:grid-cols-2 sm:mt-15 bg-background p-10 md:p-20 rounded-none lg:rounded-2xl">
 					<img
+                        loading='lazy'
 						className="rounded-lg justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
 						src={homePageImage1}
 					/>
