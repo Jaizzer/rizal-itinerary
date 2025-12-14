@@ -23,7 +23,8 @@ export default function HomePage(): JSX.Element {
 			<main className="grid gap-15 md:gap-20 mb-15">
 				<section className="max-w-[1304px] grid gap-3 md:grid-cols-2 sm:mt-15 bg-background p-10 md:p-20 rounded-none lg:rounded-2xl">
 					<img
-                        loading='lazy'
+						decoding="async"
+						loading="lazy"
 						className="rounded-lg justify-self-center md:max-w-full md:col-start-2 md:row-span-full md:justify-self-end"
 						src={homePageImage1}
 					/>
@@ -63,9 +64,7 @@ export default function HomePage(): JSX.Element {
 								</div>
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
-									<p className="text-sm">
-										Rizal won a lottery in Dapitan.
-									</p>
+									<p className="text-sm">Rizal won a lottery in Dapitan.</p>
 								</div>
 							</li>
 							<li className="grid grid-cols-[auto_1fr] items-start gap-6">
@@ -75,7 +74,8 @@ export default function HomePage(): JSX.Element {
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
 									<p className="text-sm">
-										Rizal's one-month sea voyage now takes a single 14-hour flight.
+										Rizal's one-month sea voyage now takes a single 14-hour
+										flight.
 									</p>
 								</div>
 							</li>
@@ -85,9 +85,7 @@ export default function HomePage(): JSX.Element {
 								</div>
 								<div>
 									<h3 className="text-lg font-semibold">Heading</h3>
-									<p className="text-sm">
-										Rizal is a Master Mason.
-									</p>
+									<p className="text-sm">Rizal is a Master Mason.</p>
 								</div>
 							</li>
 						</ul>

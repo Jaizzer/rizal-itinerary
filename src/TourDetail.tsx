@@ -116,6 +116,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 	return (
 		<div className="relative group">
 			<img
+				decoding="async"
 				loading="lazy"
 				src={images[index]}
 				alt={title}
@@ -174,6 +175,7 @@ function SectionCard({
 		<div className="bg-white rounded-2xl shadow-md overflow-hidden">
 			<div className="relative group">
 				<img
+					decoding="async"
 					loading="lazy"
 					src={current.image}
 					alt={current.title}
@@ -228,6 +230,7 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }) {
 				{people.map((person) => (
 					<div key={person.name} className="w-28 text-center">
 						<img
+							decoding="async"
 							src={person.image}
 							alt={person.name}
 							className="w-28 h-28 rounded-full object-cover shadow-md"
