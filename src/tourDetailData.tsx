@@ -757,7 +757,7 @@ const tourDetails: TourDetail[] = [
 			{ title: 'Apartment on Rue de Maubeuge', image: parisLodging2 },
 			{ title: 'Apartment on Rue de Maubeuge', image: parisLodging4 },
 			{ title: 'Hotel de Paris', image: parisLodging3 }, // Using 3 for the third type
-			{ title: 'Hotel de Paris', image: parisLodging1}, // Using 3 for the third type
+			{ title: 'Hotel de Paris', image: parisLodging1 }, // Using 3 for the third type
 		],
 
 		food: [
@@ -1409,7 +1409,6 @@ const tourDetails: TourDetail[] = [
 			// Rizal's Residences (Historical Context)
 			{ title: 'Palace Hotel (San Francisco)', image: usaLodging1 },
 			{ title: 'Palace Hotel (San Francisco)', image: usaLodging2 },
-			
 		],
 
 		food: [
