@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { FaHotel, FaMapMarkedAlt, FaMonument, FaUtensils } from 'react-icons/fa';
 import { IoPeopleCircle } from 'react-icons/io5';
@@ -113,6 +113,12 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 		setIndex((i) => (i - 1 + images.length) % images.length);
 	};
 
+	// Preload next image
+	useEffect(() => {
+		const img = new Image();
+		img.src = images[(index + 1) % images.length];
+	}, [index, images]);
+
 	return (
 		<div className="relative group">
 			<img
@@ -168,6 +174,12 @@ function SectionCard({
 	const prev = () => {
 		setIndex((i) => (i - 1 + items.length) % items.length);
 	};
+
+	// Preload next image
+	useEffect(() => {
+		const img = new Image();
+		img.src = items[(index + 1) % items.length].image;
+	}, [index, items]);
 
 	const current = items[index];
 
@@ -231,6 +243,7 @@ function PeopleGrid({ people, title }: { people: Person[]; title: string }) {
 					<div key={person.name} className="w-28 text-center">
 						<img
 							decoding="async"
+							loading="lazy"
 							src={person.image}
 							alt={person.name}
 							className="w-28 h-28 rounded-full object-cover shadow-md"
