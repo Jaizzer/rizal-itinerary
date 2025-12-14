@@ -113,7 +113,6 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 		setIndex((i) => (i - 1 + images.length) % images.length);
 	};
 
-	// Preload next image
 	useEffect(() => {
 		const img = new Image();
 		img.src = images[(index + 1) % images.length];
@@ -149,6 +148,21 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 					>
 						›
 					</button>
+
+					{/* Dots */}
+					<div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+						{images.map((_, i) => (
+							<span
+								key={i}
+								className={`w-3 h-3 rounded-full transition-all cursor-pointer ${
+									i === index ? 'bg-accent scale-125' : 'bg-white/70'
+								}`}
+								onClick={() => {
+									setIndex(i);
+								}}
+							></span>
+						))}
+					</div>
 				</>
 			)}
 		</div>
@@ -175,7 +189,6 @@ function SectionCard({
 		setIndex((i) => (i - 1 + items.length) % items.length);
 	};
 
-	// Preload next image
 	useEffect(() => {
 		const img = new Image();
 		img.src = items[(index + 1) % items.length].image;
@@ -214,6 +227,21 @@ function SectionCard({
 						>
 							›
 						</button>
+
+						{/* Dots */}
+						<div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+							{items.map((_, i) => (
+								<span
+									key={i}
+									className={`w-3 h-3 rounded-full transition-all cursor-pointer ${
+										i === index ? 'bg-accent scale-125' : 'bg-white/70'
+									}`}
+									onClick={() => {
+										setIndex(i);
+									}}
+								></span>
+							))}
+						</div>
 					</>
 				)}
 			</div>
