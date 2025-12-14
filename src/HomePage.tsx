@@ -37,9 +37,9 @@ export default function HomePage(): JSX.Element {
 							<br /> Travel History
 						</h1>
 						<p>
-							Follow in the footsteps of José Rizal across the Philippines and the
-							world. Learn about his education, travels, works, and the people who
-							shaped his remarkable journey.
+							Follow José Rizal’s journeys around the world. Explore the countries he
+							visited, the people he met, and the experiences that influenced his life
+							and works abroad.
 						</p>
 						<button
 							className="bg-primary hover:bg-accent justify-self-start rounded-md mt-4 p-3 text-center font-semibold text-white"
